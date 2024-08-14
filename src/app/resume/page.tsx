@@ -8,12 +8,12 @@ const Home = () => (
   <main className="flex min-h-screen flex-col items-center justify-between bg-gradient-to-br from-black via-black to-blue-800 p-24">
     <Navbar>
       <Link href="/">
-        <NavbarItem highlight>
+        <NavbarItem>
           <p>Home</p>
         </NavbarItem>
       </Link>
       <Link href="/resume">
-        <NavbarItem>
+        <NavbarItem highlight>
           <p>Resume</p>
         </NavbarItem>
       </Link>
