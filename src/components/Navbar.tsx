@@ -19,12 +19,12 @@ const Navbar = ({ page }: NavbarProps) => (
         <p>Resume</p>
       </NavbarItem>
     </Link>
-    <Link href="/astro">
-      <NavbarItem highlight={page === "/astro"}>
+    <a href="https://astro.santivegega.com" target="_blank">
+      <NavbarItem>
         <p>Astro</p>
         <TbExternalLink />
       </NavbarItem>
-    </Link>
+    </a>
   </nav>
 );
 
