@@ -16,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={robotoMono.className}>{children}</body>
+      <body
+        className={`${robotoMono.className} bg-gradient-to-br from-black via-black to-violet-800`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,17 +1,19 @@
+import HighlightedText from "@/components/HighlightedText";
 import Navbar from "@/components/Navbar";
 
-const Home = () => (
-  <main className="flex min-h-screen flex-col items-center justify-between bg-gradient-to-br from-black via-black to-blue-800 p-24">
+const Resume = () => (
+  <main className="flex min-h-screen flex-col items-start justify-between">
     <Navbar page="/resume" />
-    <div className="ml-96 mt-32 flex h-1/2 w-1/2 flex-col gap-5 border text-white">
-      <h2 className="text-5xl font-extrabold">Hello, I'm Santiago</h2>
-      <p className="font-semibold">
-        I'm a Full Stack Engineer living in the United States with a passion for
-        astrophotography, creative coding and information visualization.
-        Previously at Despegar. Currently available for hire.
-      </p>
+    <div className="mt-28 flex flex-col gap-5 px-48 font-semibold tracking-wide text-white">
+      <h2 className="inline-block bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text py-1 text-5xl font-extrabold text-transparent">
+        Santiago Vegega
+      </h2>
+      <p>Full Stack Engineer / Minneapolis, MN / santivegega@gmail.com</p>
+      <div className="border-1 h-96 min-w-max border border-white">
+        <p>asd</p>
+      </div>
     </div>
   </main>
 );
 
-export default Home;
+export default Resume;
