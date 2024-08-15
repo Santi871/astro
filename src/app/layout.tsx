@@ -5,22 +5,14 @@ import "./globals.css";
 const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Santiago Vegega",
-  description: "Personal page",
+  title: "Astro",
+  description: "Gallery page",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${robotoMono.className} bg-gradient-to-br from-black via-black to-violet-800`}
-      >
-        {children}
-      </body>
-    </html>
-  );
-}
+const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => (
+  <html lang="en">
+    <body className={`${robotoMono.className}`}>{children}</body>
+  </html>
+);
+
+export default RootLayout;

@@ -1,23 +1,41 @@
-import HighlightedText from "@/components/HighlightedText";
+"use client";
+
 import Navbar from "@/components/Navbar";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { BsArrowRightCircle, BsArrowDownCircle } from "react-icons/bs";
 
 const Home = () => (
-  <main className="flex min-h-screen flex-col items-center justify-between py-24 md:px-24">
+  <main className="flex min-h-screen items-end justify-center bg-neutral-950 pt-36 lg:items-center lg:justify-end">
     <Navbar page="/" />
-    <div className="mt-32 flex w-5/6 flex-col gap-5 font-semibold tracking-wide text-white md:ml-96 md:h-1/2 md:w-1/2">
-      <h2 className="inline-block bg-gradient-to-r from-red-500 to-yellow-400 bg-clip-text py-2 text-5xl font-extrabold text-transparent">
-        Hello, I'm Santiago.
-      </h2>
-      <p>
-        I'm a <HighlightedText>Full Stack Engineer</HighlightedText> living in
-        the United States with a passion for astrophotography, creative coding
-        and information visualization.
-      </p>
-      <p>
-        Previously at Despegar.com. Currently{" "}
-        <HighlightedText underlined>available for hire.</HighlightedText>
-      </p>
-    </div>
+    <AnimatePresence initial={false}>
+      <motion.div
+        key="image"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0.3 }}
+        className="flex"
+      >
+        <Image
+          src="https://cdn.discordapp.com/attachments/777938117532450879/871129478892498944/LFProcessedSharpenedMosaicFinalMoon_040924_lapl5_ap213_Drizzle15_stitch.jpg?ex=66be670c&is=66bd158c&hm=b7a1c5a7d70dcdd9bfbbcd38a2d9b3f4d838e2b4e084bbdc13d86a368e56e4d9&"
+          alt="moon"
+          fill
+          className="object-cover"
+        />
+        <motion.div key="tour-button" className="z-0">
+          <Link
+            className="flex flex-col items-center justify-center gap-5 lg:mr-48 lg:text-2xl"
+            href="/carina"
+          >
+            <p>Take a tour</p>
+            <BsArrowRightCircle className="z-50 hidden h-16 w-16 cursor-pointer lg:block" />
+            <BsArrowDownCircle className="z-50 mb-10 h-16 w-16 cursor-pointer lg:hidden" />
+          </Link>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
   </main>
 );
 

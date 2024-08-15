@@ -6,14 +6,12 @@ const HighlightedText = ({
 }: {
   underlined?: boolean;
   children: ReactNode;
-}) => {
-  return (
-    <span
-      className={`${underlined ? "bg-yellow-400" : "bg-white"} px-1 py-0.5 text-black ${underlined ? "underline" : ""}`}
-    >
-      {children}
-    </span>
-  );
-};
+}) => (
+  <span
+    className={`${underlined ? "bg-yellow-400" : "bg-white"} px-1 py-0.5 text-black ${underlined ? "underline" : ""}`}
+  >
+    {children}
+  </span>
+);
 
 export default HighlightedText;
