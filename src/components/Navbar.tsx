@@ -10,9 +10,9 @@ interface NavbarProps {
 
 const Navbar = ({ page, noGradient = false }: NavbarProps) => (
   <nav
-    className={`fixed top-0 z-50 flex w-screen justify-center ${noGradient ? "" : "bg-gradient-to-t"} from-black/0 to-black p-10 text-center text-white md:gap-5`}
+    className={`fixed top-0 z-50 flex w-screen justify-center ${noGradient ? "" : "bg-gradient-to-t"} from-black/0 to-black/80 p-10 text-center text-white md:gap-5`}
   >
-    <p className="absolute left-0 ml-10 py-3 text-white/15">
+    <p className="absolute left-5 top-1 mx-auto ml-10 py-3 text-white/15 2xl:left-0 2xl:top-10">
       Astrophotography © Santiago Vegega 2024
     </p>
     <Link href="/">

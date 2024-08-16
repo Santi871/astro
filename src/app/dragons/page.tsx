@@ -4,64 +4,61 @@ import Navbar from "@/components/Navbar";
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { BsFilterRight } from "react-icons/bs";
+import { BsArrowDownCircle, BsArrowRightCircle } from "react-icons/bs";
+import Link from "next/link";
 
-const Dragons = () => {
-  const [detailsOpen, setDetailsOpen] = React.useState<boolean>(false);
-
-  return (
-    <>
-      <Navbar page="" noGradient />
-      <motion.main
-        className="flex min-h-screen flex-col items-center justify-center gap-3 bg-neutral-950/30 pb-5 pt-28 lg:flex-row lg:items-end"
-        layout
-      >
-        <motion.div
-          className="relative h-[calc(90vh-150px)] w-11/12 lg:h-[calc(100vh-150px)] lg:max-w-screen-lg"
-          layout
-        >
-          <Image
-            src="https://cdn.astrobin.com/thumbs/k7FfrMzfDyXS_1824x0_CvlzE9Ft.png"
-            alt="dragons-nebula"
-            fill
-            className="rounded-xl object-cover shadow-xl shadow-black/80"
-          />
-          {/* 
-        <BsFilterRight
-          className="absolute bottom-0 right-0 mr-2 h-12 w-12 cursor-pointer text-white/80"
-          onClick={() => setDetailsOpen(!detailsOpen)}
+const Dragons = () => (
+  <>
+    <Navbar page="/" />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="items-center justify-evenly gap-96 2xl:flex 2xl:flex-row"
+    >
+      <div className="relative h-[calc(87vh-150px)] 2xl:left-96 2xl:min-h-screen 2xl:w-1/3">
+        <Image
+          src="https://cdn.astrobin.com/thumbs/k7FfrMzfDyXS_1824x0_CvlzE9Ft.png"
+          alt="moon"
+          fill
+          className="z-0 object-cover"
         />
-        */}
-        </motion.div>
-        <motion.div
-          layout
-          onClick={() => setDetailsOpen(!detailsOpen)}
-          initial={{ borderRadius: 12 }}
-          className={`z-50 flex flex-col lg:flex-row lg:gap-12 ${detailsOpen ? "h-96 w-11/12 lg:w-96" : "h-10 w-10"} cursor-pointer items-center justify-start bg-neutral-900 shadow-xl shadow-black/80 lg:items-end lg:justify-start`}
+      </div>
+      <div className="z-0 mt-8 flex flex-col items-center justify-center gap-1 text-center">
+        <h4 className="text-4xl 2xl:text-5xl">Dragons of Ara</h4>
+        <h6 className="text-xl">NGC 6188</h6>
+        <h6 className="text-xl">
+          <span className="text-green-500">Hα</span>,{" "}
+          <span className="text-red-500">Sii</span>,{" "}
+          <span className="text-blue-500">Oiii</span>
+        </h6>
+        <div className="mt-8 max-w-xl px-4 text-left">
+          <p className="text-md">Right Ascension: 49</p>
+          <p className="text-md">Declination: 49</p>
+          <p className="mt-4 text-justify text-sm">
+            NGC 6188, The Fighting Dragons of Ara, is an emission nebula in the
+            constellation of Ara. It gets its name from the apparent silhouette
+            of two dragons engaged in a cosmic combat. Due to its hydrogen-rich
+            clouds, NGC 6188 is a region of active star formation, and its
+            structure is shaped by the powerful stellar winds of the young and
+            massive stars within.
+          </p>
+          <p className="mt-4 text-justify text-sm">
+            The glowing bipolar planetary nebula, NGC 6164, is visible at the
+            bottom of the frame, which some liken to being like the "dragon's
+            egg".
+          </p>
+        </div>
+        <Link
+          href="/dragons"
+          className="flex flex-col items-center justify-center gap-5 pt-24 2xl:text-2xl"
         >
-          <motion.div
-            layout
-            className="mt-3 h-4 w-4 rounded-full bg-pink-500 lg:mb-3 lg:ml-3"
-          />
-          {detailsOpen && (
-            <motion.div className="flex h-full flex-col gap-2 py-4">
-              <p className="mb-4 text-2xl">Dragons of Ara</p>
-              <p className="text-md">Right Ascension: 49</p>
-              <p className="text-md">Declination: 49</p>
-            </motion.div>
-          )}
-        </motion.div>
-        {detailsOpen && false && (
-          <motion.div
-            className="h-64 w-64 rounded-xl bg-neutral-900 p-4 shadow-xl shadow-black/80"
-            layout
-          >
-            <p>Asadasdasd</p>
-          </motion.div>
-        )}
-      </motion.main>
-    </>
-  );
-};
+          <p>Continue</p>
+          <BsArrowRightCircle className="z-50 hidden h-16 w-16 cursor-pointer 2xl:block" />
+          <BsArrowDownCircle className="z-50 mb-10 h-16 w-16 cursor-pointer 2xl:hidden" />
+        </Link>
+      </div>
+    </motion.div>
+  </>
+);
 
 export default Dragons;
