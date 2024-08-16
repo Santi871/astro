@@ -19,7 +19,7 @@ const Home = () => (
         className="flex"
       >
         <Image
-          src="https://cdn.discordapp.com/attachments/777938117532450879/871129478892498944/LFProcessedSharpenedMosaicFinalMoon_040924_lapl5_ap213_Drizzle15_stitch.jpg?ex=66be670c&is=66bd158c&hm=b7a1c5a7d70dcdd9bfbbcd38a2d9b3f4d838e2b4e084bbdc13d86a368e56e4d9&"
+          src="https://cdn.astrobin.com/thumbs/6Crznu1BZ6XT_16536x0_ieTZ0INm.jpg"
           alt="moon"
           fill
           className="object-cover"

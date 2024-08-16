@@ -15,12 +15,12 @@ const Dragons = () => (
       animate={{ opacity: 1 }}
       className="items-center justify-evenly gap-96 2xl:flex 2xl:flex-row"
     >
-      <div className="relative h-[calc(87vh-150px)] 2xl:left-96 2xl:min-h-screen 2xl:w-1/3">
+      <div className="gradient-mask-b-80 2xl:gradient-mask-r-90-d relative h-[calc(87vh-150px)] 2xl:left-96 2xl:min-h-screen 2xl:w-5/12">
         <Image
           src="https://cdn.astrobin.com/thumbs/k7FfrMzfDyXS_1824x0_CvlzE9Ft.png"
-          alt="moon"
+          alt="dragons"
           fill
-          className="z-0 object-cover"
+          className="z-0 object-cover object-bottom"
         />
       </div>
       <div className="z-0 mt-8 flex flex-col items-center justify-center gap-1 text-center">

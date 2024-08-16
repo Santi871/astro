@@ -15,7 +15,7 @@ const Carina = () => (
       animate={{ opacity: 1 }}
       className="items-center justify-start gap-80 2xl:flex 2xl:w-11/12 2xl:flex-row"
     >
-      <div className="relative h-[calc(87vh-150px)] 2xl:min-h-screen 2xl:w-2/3">
+      <div className="gradient-mask-b-80 2xl:gradient-mask-r-80 relative h-[calc(87vh-150px)] 2xl:min-h-screen 2xl:w-2/3">
         <Image
           src="https://cdn.discordapp.com/attachments/544305081009438720/1087034206858780775/1.jpg?ex=66bf6f7f&is=66be1dff&hm=bdee36ea0d6c6b62f4609de909b059b9bd04477231cf85b04f6a7bedd847b2db&"
           alt="carina"
@@ -23,7 +23,7 @@ const Carina = () => (
           className="z-0 object-cover"
         />
       </div>
-      <div className="z-0 mt-8 flex flex-col items-center justify-center gap-2 text-center">
+      <div className="relative z-0 mt-8 flex flex-col items-center justify-center gap-2 text-center">
         <h4 className="text-4xl 2xl:text-5xl">Eta Carina Widefield</h4>
         <h4 className="text-xl">
           Eta Carina Nebula, Running Chicken Nebula, Southern Pleiades cluster
