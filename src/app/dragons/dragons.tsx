@@ -13,7 +13,7 @@ const Dragons = ({ children }: { children: React.ReactNode }) => (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="items-center justify-evenly gap-96 2xl:flex 2xl:flex-row"
+      className="items-center justify-evenly gap-[17rem] 2xl:flex 2xl:flex-row"
     >
       <div className="relative h-[calc(87vh-150px)] gradient-mask-b-80 2xl:left-96 2xl:min-h-screen 2xl:w-5/12 2xl:gradient-mask-r-90-d">
         {children}
@@ -44,7 +44,7 @@ const Dragons = ({ children }: { children: React.ReactNode }) => (
           </p>
         </div>
         <Link
-          href="/dragons"
+          href="/tarantula"
           className="flex flex-col items-center justify-center gap-5 pt-24 2xl:text-2xl"
           prefetch
         >
