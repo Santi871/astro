@@ -18,7 +18,7 @@ const ContinueButton = ({ text, href, animate = false }: NextImageProps) => (
     >
       <motion.div
         whileHover={{ scale: 1.15 }}
-        className="flex flex-col items-center gap-3"
+        className={`flex flex-col items-center ${animate ? "gap-3" : "gap-2"}`}
       >
         <p>{text}</p>
         <motion.div
@@ -51,7 +51,7 @@ const ContinueButton = ({ text, href, animate = false }: NextImageProps) => (
             repeat: Infinity,
           }}
         >
-          <BsArrowDownCircle className="z-50 h-12 w-12 cursor-pointer 2xl:hidden" />
+          <BsArrowDownCircle className="z-50 mb-8 h-12 w-12 cursor-pointer 2xl:hidden" />
         </motion.div>
       </motion.div>
     </Link>

@@ -63,7 +63,7 @@ const Home = () => {
             fill
             priority
           />
-          <div className="relative bottom-20 2xl:right-24">
+          <div className="relative mb-8 2xl:right-24">
             <ContinueButton text="Take a tour" href="/gallery/carina" animate />
           </div>
         </motion.div>

@@ -11,12 +11,12 @@ const Carina = ({ children }: { children: React.ReactNode }) => (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="items-center justify-start gap-80 2xl:flex 2xl:w-11/12 2xl:flex-row"
+      className="items-center justify-between 2xl:flex"
     >
-      <div className="relative h-[calc(87vh-150px)] gradient-mask-b-80 2xl:min-h-screen 2xl:w-2/3 2xl:gradient-mask-r-80">
+      <div className="relative h-[calc(87vh-150px)] gradient-mask-b-80 2xl:min-h-screen 2xl:w-[180vw] 2xl:max-w-[130rem] 2xl:gradient-mask-r-80">
         {children}
       </div>
-      <div className="relative z-0 mt-8 flex flex-col items-center justify-center gap-2 text-center">
+      <div className="z-0 mt-8 flex grow flex-col items-center justify-center gap-2 px-24 text-center">
         <h4 className="text-4xl 2xl:text-5xl">Eta Carina Widefield</h4>
         <h4 className="text-xl">
           Eta Carina Nebula, Running Chicken Nebula, Southern Pleiades cluster

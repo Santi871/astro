@@ -11,12 +11,12 @@ const Tarantula = ({ children }: { children: React.ReactNode }) => (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="items-center justify-evenly gap-[17rem] 2xl:flex 2xl:flex-row-reverse"
+      className="items-center justify-between 2xl:flex 2xl:flex-row-reverse"
     >
-      <div className="relative h-[calc(87vh-150px)] gradient-mask-b-80 2xl:right-96 2xl:min-h-screen 2xl:w-2/5 2xl:gradient-mask-r-90-d">
+      <div className="relative h-[calc(87vh-150px)] gradient-mask-b-80 2xl:min-h-screen 2xl:w-[180vw] 2xl:max-w-[130rem] 2xl:gradient-mask-l-80">
         {children}
       </div>
-      <div className="relative z-0 mt-8 flex flex-col items-center justify-center gap-2 text-center">
+      <div className="relative z-0 mt-8 flex grow flex-col items-center justify-center gap-2 text-center">
         <h4 className="text-4xl 2xl:text-5xl">Tarantula</h4>
         <h4 className="text-xl">Large Magellanic Cloud</h4>
         <h6 className="text-xl">
