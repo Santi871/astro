@@ -1,12 +1,11 @@
 import React from "react";
 import Dragons from "./dragons";
 import FadeInImage from "@/components/FadeInImage";
-import dragons from "@/../public/dragons.png";
 
 const DragonsPage = () => (
   <Dragons>
     <FadeInImage
-      src={dragons}
+      src="https://cdn.astrobin.com/thumbs/k7FfrMzfDyXS_1824x0_CvlzE9Ft.png"
       alt="dragons"
       className="z-50 object-cover object-bottom transition-all"
       fill

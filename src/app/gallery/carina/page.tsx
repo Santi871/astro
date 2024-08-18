@@ -1,12 +1,11 @@
 import React from "react";
 import Carina from "./carina";
 import FadeInImage from "@/components/FadeInImage";
-import carina from "@/../public/carina.jpg";
 
 const CarinaPage = () => (
   <Carina>
     <FadeInImage
-      src={carina}
+      src="https://cdn.astrobin.com/thumbs/eTeJngp4--ae_16536x0_ieTZ0INm.jpg"
       alt="carina"
       className="z-0 object-cover transition-all"
       fill
