@@ -10,8 +10,6 @@ import {
   LogLevel,
 } from "@microsoft/signalr";
 import ContinueButton from "@/components/ContinueButton";
-import moon from "@/../public/moon.jpg";
-import Image from "next/image";
 
 const Home = () => {
   const [connection, setConnection] = useState<HubConnection | null>(null);
@@ -57,12 +55,11 @@ const Home = () => {
           exit={{ opacity: 0.3 }}
           className="flex"
         >
-          <Image
-            src={moon}
+          <FadeInImage
+            src="https://cdn.astrobin.com/thumbs/6Crznu1BZ6XT_16536x0_ieTZ0INm.jpg"
             alt="moon"
             className="object-cover"
             quality={100}
-            placeholder="blur"
             fill
             priority
           />
