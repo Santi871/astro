@@ -3,68 +3,76 @@
 import FadeInImage from "@/components/FadeInImage";
 import Navbar from "@/components/Navbar";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
-import React from "react";
-import { BsArrowRightCircle, BsArrowDownCircle } from "react-icons/bs";
+import React, { useEffect, useState } from "react";
+import {
+  HubConnection,
+  HubConnectionBuilder,
+  LogLevel,
+} from "@microsoft/signalr";
+import ContinueButton from "@/components/ContinueButton";
+import moon from "@/../public/moon.jpg";
+import Image from "next/image";
 
-const Home = () => (
-  <main className="right-10 flex min-h-screen items-end justify-center bg-black pt-36 2xl:items-center 2xl:justify-end">
-    <Navbar page="/" />
-    <AnimatePresence>
-      <motion.div
-        key="image"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0.3 }}
-        className="flex"
-      >
-        <FadeInImage
-          src="https://cdn.astrobin.com/thumbs/6Crznu1BZ6XT_16536x0_ieTZ0INm.jpg"
-          alt="moon"
-          fill
-          className="object-cover"
-        />
-        <motion.div key="tour-button" className="z-0">
-          <Link
-            className="relative bottom-6 flex flex-col items-center justify-center gap-5 2xl:mr-24 2xl:text-2xl"
-            href="/carina"
-            prefetch
-          >
-            <motion.div
-              whileHover={{ scale: 1.15 }}
-              className="flex flex-col items-center gap-3"
-            >
-              <p>Take a tour</p>
-              <motion.div
-                animate={{
-                  x: [-10, 10, -10],
-                }}
-                transition={{
-                  duration: 2,
-                  ease: "easeInOut",
-                  repeat: Infinity,
-                }}
-              >
-                <BsArrowRightCircle className="r z-50 hidden h-16 w-16 cursor-pointer 2xl:block" />
-              </motion.div>
-              <motion.div
-                animate={{
-                  y: [-10, 10, -10],
-                }}
-                transition={{
-                  duration: 2,
-                  ease: "easeInOut",
-                  repeat: Infinity,
-                }}
-              >
-                <BsArrowDownCircle className="r z-50 h-12 w-12 cursor-pointer 2xl:hidden" />
-              </motion.div>
-            </motion.div>
-          </Link>
+const Home = () => {
+  const [connection, setConnection] = useState<HubConnection | null>(null);
+  const [connected, setConnected] = useState<boolean>(false);
+
+  useEffect(() => {
+    const connect = new HubConnectionBuilder()
+      .withUrl("http://localhost:5053/hub")
+      .withAutomaticReconnect([1, 3, 6])
+      .configureLogging(LogLevel.Information)
+      .build();
+    setConnection(connect);
+    connect
+      .start()
+      .then(() => {
+        setConnected(true);
+        connect.onclose(() => setConnected(false));
+      })
+
+      .catch((err) =>
+        console.error("Error while connecting to SignalR Hub:", err),
+      );
+
+    return () => {
+      if (connection) {
+        connection.off("ReceiveMessage");
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log(connected);
+  }, [connected]);
+
+  return (
+    <main className="right-10 flex min-h-screen items-end justify-center bg-black pt-36 2xl:items-center 2xl:justify-end">
+      <Navbar page="/" />
+      <AnimatePresence>
+        <motion.div
+          key="image"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0.3 }}
+          className="flex"
+        >
+          <Image
+            src={moon}
+            alt="moon"
+            className="object-cover"
+            quality={100}
+            placeholder="blur"
+            fill
+            priority
+          />
+          <div className="relative bottom-20 2xl:right-24">
+            <ContinueButton text="Take a tour" href="/gallery/carina" animate />
+          </div>
         </motion.div>
-      </motion.div>
-    </AnimatePresence>
-  </main>
-);
+      </AnimatePresence>
+    </main>
+  );
+};
 
 export default Home;
