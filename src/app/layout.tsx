@@ -11,7 +11,9 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => (
   <html lang="en">
-    <body className={`${robotoMono.className}`}>{children}</body>
+    <body className={`${robotoMono.className} bg-black text-white`}>
+      {children}
+    </body>
   </html>
 );
 

@@ -59,7 +59,7 @@ const FadeInImage = (
       initial={"hidden"}
       animate={animationControls}
       variants={animationVariants}
-      transition={{ ease: "easeOut", duration: 0.03 }}
+      transition={{ ease: "easeOut", duration: 0.2 }}
     >
       <Image {...props} onLoad={() => setLoaded(true)} />
     </motion.div>

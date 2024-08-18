@@ -16,7 +16,7 @@ const Tarantula = ({ children }: { children: React.ReactNode }) => (
       <div className="relative h-[calc(87vh-150px)] gradient-mask-b-80 2xl:min-h-screen 2xl:w-[180vw] 2xl:max-w-[130rem] 2xl:gradient-mask-l-80">
         {children}
       </div>
-      <div className="relative z-0 mt-8 flex grow flex-col items-center justify-center gap-2 text-center">
+      <div className="z-0 mt-8 flex grow flex-col items-center justify-center gap-2 px-2 text-center 2xl:min-w-[36rem] 2xl:px-24">
         <h4 className="text-4xl 2xl:text-5xl">Tarantula</h4>
         <h4 className="text-xl">Large Magellanic Cloud</h4>
         <h6 className="text-xl">
@@ -24,7 +24,7 @@ const Tarantula = ({ children }: { children: React.ReactNode }) => (
           <span className="text-green-500">G</span>,{" "}
           <span className="text-blue-500">B</span>
         </h6>
-        <div className="mb-8 mt-8 max-w-xl px-4 text-left">
+        <div className="mb-8 mt-8 max-w-xl px-2 text-left">
           <p className="text-md">Right Ascension: 49</p>
           <p className="text-md">Declination: 49</p>
           <p className="mt-4 text-justify text-sm">
