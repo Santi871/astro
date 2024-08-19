@@ -13,7 +13,7 @@ const Carina = ({ children }: { children: React.ReactNode }) => (
       animate={{ opacity: 1 }}
       className="items-center justify-between 2xl:flex"
     >
-      <div className="relative h-[calc(87vh-150px)] gradient-mask-b-80 2xl:min-h-screen 2xl:w-[180vw] 2xl:max-w-[130rem] 2xl:gradient-mask-r-80">
+      <div className="relative h-[calc(100vh-120px)] gradient-mask-b-80 2xl:h-[calc(87vh-150px)] 2xl:min-h-screen 2xl:w-[180vw] 2xl:max-w-[130rem] 2xl:gradient-mask-r-80">
         {children}
       </div>
       <div className="z-0 mt-8 flex grow flex-col items-center justify-center gap-2 px-2 text-center 2xl:px-24">

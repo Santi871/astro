@@ -18,7 +18,7 @@ const ContinueButton = ({ text, href, animate = false }: NextImageProps) => (
     >
       <motion.div
         whileHover={{ scale: 1.15 }}
-        className={`flex flex-col items-center ${animate ? "gap-3" : "gap-2"}`}
+        className={`flex flex-col items-center ${animate ? "gap-3" : "gap-2 2xl:gap-3"}`}
       >
         <p>{text}</p>
         <motion.div
