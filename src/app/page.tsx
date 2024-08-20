@@ -3,47 +3,10 @@
 import FadeInImage from "@/components/FadeInImage";
 import Navbar from "@/components/Navbar";
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
-import {
-  HubConnection,
-  HubConnectionBuilder,
-  LogLevel,
-} from "@microsoft/signalr";
+import React from "react";
 import ContinueButton from "@/components/ContinueButton";
 
 const Home = () => {
-  const [connection, setConnection] = useState<HubConnection | null>(null);
-  const [connected, setConnected] = useState<boolean>(false);
-
-  useEffect(() => {
-    const connect = new HubConnectionBuilder()
-      .withUrl("http://localhost:5053/hub")
-      .withAutomaticReconnect([1, 3, 6])
-      .configureLogging(LogLevel.Information)
-      .build();
-    setConnection(connect);
-    connect
-      .start()
-      .then(() => {
-        setConnected(true);
-        connect.onclose(() => setConnected(false));
-      })
-
-      .catch((err) =>
-        console.error("Error while connecting to SignalR Hub:", err),
-      );
-
-    return () => {
-      if (connection) {
-        connection.off("ReceiveMessage");
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    console.log(connected);
-  }, [connected]);
-
   return (
     <main className="right-10 flex min-h-screen items-end justify-center bg-black pt-36 2xl:items-center 2xl:justify-end">
       <Navbar page="/" />

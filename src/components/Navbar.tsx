@@ -22,14 +22,14 @@ const Navbar = ({ page, noGradient = false }: NavbarProps) => (
         <p>Gallery</p>
       </NavbarItem>
     </a>
-    <a href="https://astro.santivegega.com" target="_blank">
-      <NavbarItem>
-        <p>Equipment</p>
+    <a href="/live">
+      <NavbarItem highlight={page === "/live"}>
+        <p>Live</p>
       </NavbarItem>
     </a>
     <a href="https://astro.santivegega.com" target="_blank">
       <NavbarItem>
-        <p>Contact</p>
+        <p>Equipment</p>
       </NavbarItem>
     </a>
   </nav>
