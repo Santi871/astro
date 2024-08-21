@@ -37,6 +37,7 @@ const EquipmentPage = () => {
             src="https://cdn.discordapp.com/attachments/866005042824740864/974921922179653662/20220415_071258.jpg?ex=66c6db4b&is=66c589cb&hm=0f064538c041cc74dfde8366e644f8581f881d1326caf87c7998888dbd265e78&"
             alt="equipment-picture"
             className="rounded-xl object-cover shadow-2xl shadow-black/80"
+            sizes="30vw,50vw, 100vw"
             fill
           />
         </div>
