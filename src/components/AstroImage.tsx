@@ -2,32 +2,36 @@
 
 import { motion } from "framer-motion";
 import React from "react";
-import Image from "next/image";
+import FadeInImage from "./FadeInImage";
+import Link from "next/link";
 
 interface AstroImageProps {
-  url: string;
+  title: string;
+  src: string;
+  href: string;
   alt: string;
+  fit?: string;
 }
 
-const AstroImage = ({ url, alt }: AstroImageProps) => {
+const AstroImage = ({ title, src, href, alt, fit = "" }: AstroImageProps) => {
   return (
-    <>
-      <motion.div
-        whileHover={{ scale: 1.03 }}
-        className="relative h-[36rem] w-5/6 cursor-pointer lg:max-w-screen-2xl"
-      >
-        <motion.div className="relative z-50 m-4 h-24 w-48 rounded-xl bg-neutral-950/70 p-4 font-mono text-neutral-300">
-          Eta Carina Nebula
+    <motion.div
+      whileHover={{ scale: 1.03 }}
+      className="relative h-[36rem] w-5/6 cursor-pointer lg:max-w-screen-2xl"
+    >
+      <Link href={href}>
+        <motion.div className="relative z-50 m-4 max-w-48 rounded-xl bg-neutral-950/50 p-2 text-center font-mono text-neutral-300 backdrop-blur-sm 2xl:text-lg">
+          {title}
         </motion.div>
-        <Image
-          src={url}
+        <FadeInImage
+          src={src}
           alt={alt}
-          className="rounded-xl object-cover shadow-xl shadow-black/80"
+          className={`rounded-xl object-cover shadow-xl shadow-black/80 ${fit}`}
           unoptimized
           fill
         />
-      </motion.div>
-    </>
+      </Link>
+    </motion.div>
   );
 };
 
