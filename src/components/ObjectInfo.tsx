@@ -11,7 +11,7 @@ interface ObjectInfoProps {
 const ObjectInfo = ({ grow = false, children }: ObjectInfoProps) => {
   return (
     <div
-      className={`z-0 mt-8 flex ${grow ? "grow" : ""} flex-col items-center justify-center gap-2 px-2 text-center 2xl:min-w-[36rem] 2xl:px-24`}
+      className={`z-0 flex ${grow ? "grow" : ""} flex-col items-center justify-center gap-2 px-2 text-center 2xl:min-w-[36rem] 2xl:px-24`}
     >
       {children}
     </div>
