@@ -12,6 +12,9 @@ import TimeAgo from "javascript-time-ago";
 
 import en from "javascript-time-ago/locale/en";
 import ReactTimeAgo from "react-time-ago";
+import ScopeDataWindow from "@/components/ScopeDataWindow";
+import ScopeDataSection from "@/components/ScopeDataSection";
+import FadeInImage from "@/components/FadeInImage";
 TimeAgo.addDefaultLocale(en);
 
 interface PromQlQuery {
@@ -83,21 +86,102 @@ const LivePage = () => {
       className={`flex min-h-screen flex-col items-center justify-start gap-8 bg-neutral-950 pb-12 pt-32 ${connected && lastRefresh ? "text-white" : "text-neutral-600"} transition-all`}
     >
       <Navbar page="/live" />
-      <div className="flex h-96 w-11/12 flex-col items-center justify-between rounded-xl bg-neutral-900 p-4 shadow-xl lg:w-1/4 2xl:max-w-[130rem]">
-        <div className="flex gap-4">
-          <div className="flex w-40 flex-col items-center gap-2">
-            <p className="text-white">Altitude [deg]</p>{" "}
-            <Counter value={connected && mountAlt ? mountAlt : 0} />
-          </div>
-          <div className="flex w-40 flex-col items-center gap-2">
-            <p className="text-white">Azimuth [deg]</p> <Counter value={0} />
-          </div>
-        </div>
-        <div className="flex flex-none items-center justify-start gap-3 place-self-end text-sm text-neutral-400">
-          <div
-            className={`h-2 w-2 rounded-full ${connected ? "bg-green-400" : "bg-red-400"}`}
+      <div className="flex flex-col items-center justify-start gap-2 rounded-xl bg-neutral-900 p-4 underline-offset-4 shadow-xl">
+        <ScopeDataSection>
+          <h6 className="col-span-full text-xl text-white underline">
+            Telescope
+          </h6>
+          <ScopeDataWindow
+            name="Altitude"
+            unit="deg"
+            value={mountAlt}
+            connected={connected}
           />
-          <div className="flex flex-col items-center justify-center">
+          <ScopeDataWindow
+            name="Azimuth"
+            unit="deg"
+            value={mountAlt}
+            connected={connected}
+          />
+          <ScopeDataWindow
+            name="Right Ascension"
+            unit="deg"
+            value={mountAlt}
+            connected={connected}
+          />
+          <ScopeDataWindow
+            name="Declination"
+            unit="deg"
+            value={mountAlt}
+            connected={connected}
+          />
+          {/* <div className="col-start-3 col-end-5 row-start-4 bg-black"></div> */}
+          <div className="h-96 w-96 rounded-xl bg-neutral-950 shadow-md">
+            <FadeInImage
+              src="https://raspberrypi.local/indi-allsky/images/ccd_11f566a5-7260-441a-9206-32527af7122b/exposures/20240820/night/20_22/ccd1_20240820_222242.jpg"
+              alt="allsky"
+              fill
+            />
+          </div>
+          <h6 className="col-span-full text-xl text-white underline">Camera</h6>
+          <ScopeDataWindow
+            name="Sensor Temp"
+            unit="°C"
+            value={mountAlt}
+            connected={connected}
+          />
+          <ScopeDataWindow
+            name="Cooler Power"
+            unit="%"
+            value={mountAlt}
+            connected={connected}
+          />
+          <h6 className="col-span-full text-xl text-white underline">Guider</h6>
+          <ScopeDataWindow
+            name="RA Error"
+            unit="arcsec"
+            value={mountAlt}
+            connected={connected}
+          />
+          <ScopeDataWindow
+            name="Dec Error"
+            unit="arcsec"
+            value={mountAlt}
+            connected={connected}
+          />
+          <h6 className="col-span-full text-xl text-white underline">
+            Latest Image
+          </h6>
+          <ScopeDataWindow
+            name="Stars"
+            unit="count"
+            value={mountAlt}
+            connected={connected}
+          />
+          <ScopeDataWindow
+            name="HFR"
+            unit="px"
+            value={mountAlt}
+            connected={connected}
+          />
+          <ScopeDataWindow
+            name="Scale"
+            unit="arcsec/px"
+            value={mountAlt}
+            connected={connected}
+          />
+          <ScopeDataWindow
+            name="Exposure Time"
+            unit="sec"
+            value={mountAlt}
+            connected={connected}
+          />
+        </ScopeDataSection>
+        <div className="flex flex-none items-center justify-start gap-2 place-self-end text-sm text-neutral-500">
+          <div
+            className={`h-2 w-2 rounded-full ${connected ? "bg-green-500" : "bg-red-500"}`}
+          />
+          <div className="flex items-center justify-center gap-1">
             {connected ? "Connected" : "Disconnected"}{" "}
             {connected && lastRefresh && (
               <ReactTimeAgo

@@ -10,14 +10,14 @@ function Counter({ value }: { value: number }) {
   return (
     <div
       style={{ fontSize }}
-      className="flex w-[9rem] justify-evenly gap-3 overflow-hidden rounded bg-neutral-950 px-2"
+      className="flex w-[9rem] justify-evenly gap-3 overflow-hidden rounded bg-neutral-950 px-2 shadow-md"
     >
-      <Digit place={100} value={value} />
-      <Digit place={10} value={value} />
-      <Digit place={1} value={value} />
+      {value < 0 ? <p>-</p> : <Digit place={100} value={Math.abs(value)} />}
+      <Digit place={10} value={Math.abs(value)} />
+      <Digit place={1} value={Math.abs(value)} />
       <p>.</p>
-      <Digit place={0.1} value={value} />
-      <Digit place={0.01} value={value} />
+      <Digit place={0.1} value={Math.abs(value)} />
+      <Digit place={0.01} value={Math.abs(value)} />
     </div>
   );
 }
