@@ -36,15 +36,16 @@ const Jupiter = ({ children }: { children: React.ReactNode }) => (
         </ObjectInfo.Details>
         <ObjectInfo.Description>
           <p>
-            One of the crown jewels of the southern sky, the Eta Carinae Nebula
-            is a large, complex area of bright and dark nebulosity in the
-            constellation Carina, located in the Carina–Sagittarius Arm of the
-            Milky Way galaxy. The nebula is approximately 8,500 light-years from
-            Earth.
+            Jupiter is the largest planet in our Solar System, known for its
+            immense size and striking features. With a diameter of about 86,900
+            miles (139,800 kilometers), it is a gas giant predominantly composed
+            of hydrogen and helium. Jupiter's atmosphere is renowned for its
+            dynamic and colorful cloud bands, driven by its rapid rotation,
+            which creates a dramatic striped appearance.
           </p>
           <p>
-            The title star, η (eta) Carinae, is a supergiant of about 100 solar
-            masses that is ready to go supernova "any cosmic day now".
+            Seen in the image are some of Jupiter's largest moons: Io, Ganymede,
+            Europa. Ganymede is casting a shadow on Jupiter's surface.
           </p>
         </ObjectInfo.Description>
         <Suspense>

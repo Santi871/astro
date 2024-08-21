@@ -38,15 +38,19 @@ const SolarEclipse = ({ children }: { children: React.ReactNode }) => (
         </ObjectInfo.Details>
         <ObjectInfo.Description>
           <p>
-            One of the crown jewels of the southern sky, the Eta Carinae Nebula
-            is a large, complex area of bright and dark nebulosity in the
-            constellation Carina, located in the Carina–Sagittarius Arm of the
-            Milky Way galaxy. The nebula is approximately 8,500 light-years from
-            Earth.
+            A total solar eclipse occurs when the Moon passes directly between
+            the Earth and the Sun, completely obscuring the Sun's light from
+            reaching Earth. As the Moon and Sun appear the same diameter in the
+            sky, this alignment causes the Sun to be entirely covered by the
+            Moon, creating a dramatic and brief event where the day momentarily
+            turns into night.
           </p>
           <p>
-            The title star, η (eta) Carinae, is a supergiant of about 100 solar
-            masses that is ready to go supernova "any cosmic day now".
+            Total solar eclipses are rare events for any given location on
+            Earth, as they require precise alignment of the Earth, Moon, and
+            Sun. They offer a unique opportunity to study the Sun's corona and
+            other celestial phenomena and are celebrated for their striking
+            visual impact and fleeting duration.
           </p>
         </ObjectInfo.Description>
         <h6 className="text-3xl">Thanks for visiting!</h6>

@@ -29,15 +29,18 @@ const Tarantula = ({ children }: { children: React.ReactNode }) => (
         </ObjectInfo.Filters>
         <ObjectInfo.Description>
           <p>
-            One of the crown jewels of the southern sky, the Eta Carinae Nebula
-            is a large, complex area of bright and dark nebulosity in the
-            constellation Carina, located in the Carina–Sagittarius Arm of the
-            Milky Way galaxy. The nebula is approximately 8,500 light-years from
-            Earth.
+            The Tarantula Nebula is a colossal and vibrant star-forming region
+            located in the Large Magellanic Cloud, about 160,000 light-years
+            from Earth. It is the largest known nebula in our local universe and
+            is renowned for its intense activity and striking beauty. The
+            nebula's dynamic landscape is shaped by powerful stellar winds and
+            radiation from massive young stars, which illuminate the surrounding
+            gas and dust, creating a complex and colorful array of filaments and
+            cavities.
           </p>
           <p>
-            The title star, η (eta) Carinae, is a supergiant of about 100 solar
-            masses that is ready to go supernova "any cosmic day now".
+            At its core lies the R136 star cluster, home to some of the most
+            massive and luminous stars ever discovered.
           </p>
         </ObjectInfo.Description>
         <Suspense>

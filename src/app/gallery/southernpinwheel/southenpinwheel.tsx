@@ -29,15 +29,17 @@ const SouthernPinwheel = ({ children }: { children: React.ReactNode }) => (
         </ObjectInfo.Filters>
         <ObjectInfo.Description>
           <p>
-            One of the crown jewels of the southern sky, the Eta Carinae Nebula
-            is a large, complex area of bright and dark nebulosity in the
-            constellation Carina, located in the Carina–Sagittarius Arm of the
-            Milky Way galaxy. The nebula is approximately 8,500 light-years from
-            Earth.
+            The Southern Pinwheel Galaxy, also known as Messier 83 or M83, is a
+            stunning spiral galaxy located about 15 million light-years away in
+            the constellation Hydra. It is one of the closest and most
+            well-studied barred spiral galaxies, offering a striking view of its
+            intricate structure. This galaxy showcases vivid regions of star
+            formation, with clusters of young, hot stars and nebulae that emit a
+            rich, colorful glow.
           </p>
           <p>
-            The title star, η (eta) Carinae, is a supergiant of about 100 solar
-            masses that is ready to go supernova "any cosmic day now".
+            M83 is distinguished by its prominent central bar, sweeping spiral
+            arms, and bright, star-filled core.
           </p>
         </ObjectInfo.Description>
         <Suspense>

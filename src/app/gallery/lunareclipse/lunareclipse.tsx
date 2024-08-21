@@ -38,15 +38,18 @@ const LunarEclipse = ({ children }: { children: React.ReactNode }) => (
         </ObjectInfo.Details>
         <ObjectInfo.Description>
           <p>
-            One of the crown jewels of the southern sky, the Eta Carinae Nebula
-            is a large, complex area of bright and dark nebulosity in the
-            constellation Carina, located in the Carina–Sagittarius Arm of the
-            Milky Way galaxy. The nebula is approximately 8,500 light-years from
-            Earth.
+            A total lunar eclipse occurs when the Earth passes directly between
+            the Sun and the Moon, causing the Earth's shadow to completely cover
+            the Moon. During this event, the Moon moves into the umbra, the
+            darkest part of the Earth's shadow. As a result, the Moon can take
+            on a striking reddish or coppery hue, often referred to as a "blood
+            moon," due to the scattering of sunlight through the Earth's
+            atmosphere, which filters and bends the light.
           </p>
           <p>
-            The title star, η (eta) Carinae, is a supergiant of about 100 solar
-            masses that is ready to go supernova "any cosmic day now".
+            The totality phase of a total lunar eclipse lasts from a few minutes
+            to over an hour, depending on the specific alignment and orbital
+            dynamics.
           </p>
         </ObjectInfo.Description>
         <Suspense>

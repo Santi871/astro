@@ -35,15 +35,19 @@ const MontesAlpes = ({ children }: { children: React.ReactNode }) => (
         </ObjectInfo.Details>
         <ObjectInfo.Description>
           <p>
-            One of the crown jewels of the southern sky, the Eta Carinae Nebula
-            is a large, complex area of bright and dark nebulosity in the
-            constellation Carina, located in the Carina–Sagittarius Arm of the
-            Milky Way galaxy. The nebula is approximately 8,500 light-years from
-            Earth.
+            The Montes Alpes, or the Alps Mountains, is a prominent mountain
+            range on the Moon, located in the northern part of the lunar
+            surface, near the edge of the Imbrium Basin. This range stretches
+            approximately 200 miles (320 kilometers) and is characterized by its
+            rugged terrain and high peaks.
           </p>
           <p>
-            The title star, η (eta) Carinae, is a supergiant of about 100 solar
-            masses that is ready to go supernova "any cosmic day now".
+            The Apollo 15 mission, which landed on the Moon in July 1971, made a
+            significant stop in the vicinity of the Montes Alpes. The Lunar
+            Module, "Falcon," landed in the nearby Hadley-Apennine region,
+            allowing astronauts David Scott and James Irwin to explore the area.
+            Their exploration included visits to the base of the Montes Alpes,
+            where they collected samples and conducted experiments.
           </p>
         </ObjectInfo.Description>
         <Suspense>
