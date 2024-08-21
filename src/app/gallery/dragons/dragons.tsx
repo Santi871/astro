@@ -1,7 +1,7 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import React from "react";
+import React, { Suspense } from "react";
 import { motion } from "framer-motion";
 import ContinueButton from "@/components/ContinueButton";
 import ObjectInfo from "@/components/ObjectInfo";
@@ -49,10 +49,12 @@ const Dragons = ({ children }: { children: React.ReactNode }) => (
             egg".
           </p>
         </ObjectInfo.Description>
-        <ContinueButton
-          text="Continue (3/9)"
-          href="/gallery/southernpinwheel"
-        />
+        <Suspense>
+          <ContinueButton
+            text="Continue (3/9)"
+            href="/gallery/southernpinwheel"
+          />
+        </Suspense>
       </ObjectInfo>
     </motion.div>
   </>

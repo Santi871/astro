@@ -1,7 +1,7 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import React from "react";
+import React, { Suspense } from "react";
 import { motion } from "framer-motion";
 import ContinueButton from "@/components/ContinueButton";
 import ObjectInfo from "@/components/ObjectInfo";
@@ -47,7 +47,9 @@ const Jupiter = ({ children }: { children: React.ReactNode }) => (
             masses that is ready to go supernova "any cosmic day now".
           </p>
         </ObjectInfo.Description>
-        <ContinueButton text="Continue (7/9)" href="/gallery/lunareclipse" />
+        <Suspense>
+          <ContinueButton text="Continue (6/9)" href="/gallery/lunareclipse" />
+        </Suspense>
       </ObjectInfo>
     </motion.div>
   </>

@@ -1,7 +1,7 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import React from "react";
+import React, { Suspense } from "react";
 import { motion } from "framer-motion";
 import ContinueButton from "@/components/ContinueButton";
 import ObjectInfo from "@/components/ObjectInfo";
@@ -50,7 +50,9 @@ const SolarEclipse = ({ children }: { children: React.ReactNode }) => (
           </p>
         </ObjectInfo.Description>
         <h6 className="text-3xl">Thanks for visiting!</h6>
-        <ContinueButton text="Continue to gallery" href="/gallery" />
+        <Suspense>
+          <ContinueButton text="Continue to gallery" href="/gallery" />
+        </Suspense>
       </ObjectInfo>
     </motion.div>
   </>
