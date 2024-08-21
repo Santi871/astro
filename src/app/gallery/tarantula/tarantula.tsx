@@ -20,13 +20,13 @@ const Tarantula = ({ children }: { children: React.ReactNode }) => (
       <ObjectInfo grow>
         <ObjectInfo.Title>Tarantula</ObjectInfo.Title>
         <ObjectInfo.Subtitle>Large Magellanic Cloud</ObjectInfo.Subtitle>
-        <ObjectInfo.Details>
+        <ObjectInfo.Filters>
           <h6>
             <span className="text-red-500">R</span>,{" "}
             <span className="text-green-500">G</span>,{" "}
             <span className="text-blue-500">B</span>
           </h6>
-        </ObjectInfo.Details>
+        </ObjectInfo.Filters>
         <ObjectInfo.Description>
           <p>
             One of the crown jewels of the southern sky, the Eta Carinae Nebula

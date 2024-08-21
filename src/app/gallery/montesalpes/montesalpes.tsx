@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import ContinueButton from "@/components/ContinueButton";
 import ObjectInfo from "@/components/ObjectInfo";
 
-const Carina = ({ children }: { children: React.ReactNode }) => (
+const MontesAlpes = ({ children }: { children: React.ReactNode }) => (
   <>
     <Navbar page="/" />
     <motion.div
@@ -18,10 +18,8 @@ const Carina = ({ children }: { children: React.ReactNode }) => (
         {children}
       </div>
       <ObjectInfo grow>
-        <ObjectInfo.Title>Eta Carina Widefield</ObjectInfo.Title>
-        <ObjectInfo.Subtitle>
-          Eta Carina Nebula, Running Chicken Nebula, Southern Pleiades cluster
-        </ObjectInfo.Subtitle>
+        <ObjectInfo.Title>Montes Alpes</ObjectInfo.Title>
+        <ObjectInfo.Subtitle>Messier 83</ObjectInfo.Subtitle>
         <ObjectInfo.Filters>
           <h6>
             <span className="text-red-500">R</span>,{" "}
@@ -29,6 +27,12 @@ const Carina = ({ children }: { children: React.ReactNode }) => (
             <span className="text-blue-500">B</span>
           </h6>
         </ObjectInfo.Filters>
+        <ObjectInfo.Details>
+          <p>Imaging Type: Lucky Imaging</p>
+          <p>Focal Length: 1800mm</p>
+          <p>Aperture: 130mm</p>
+          <p>Pixel size: 2.9μm</p>
+        </ObjectInfo.Details>
         <ObjectInfo.Description>
           <p>
             One of the crown jewels of the southern sky, the Eta Carinae Nebula
@@ -42,10 +46,10 @@ const Carina = ({ children }: { children: React.ReactNode }) => (
             masses that is ready to go supernova "any cosmic day now".
           </p>
         </ObjectInfo.Description>
-        <ContinueButton text="Continue" href="/gallery/tarantula" />
+        <ContinueButton text="Continue" href="/gallery/lagoon" />
       </ObjectInfo>
     </motion.div>
   </>
 );
 
-export default Carina;
+export default MontesAlpes;

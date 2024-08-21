@@ -20,12 +20,19 @@ const Dragons = ({ children }: { children: React.ReactNode }) => (
       <ObjectInfo>
         <ObjectInfo.Title>Dragons of Ara</ObjectInfo.Title>
         <ObjectInfo.Subtitle>NGC 6188</ObjectInfo.Subtitle>
-        <ObjectInfo.Details>
+        <ObjectInfo.Filters>
           <h6>
+            <span className="text-red-500">SII</span>,{" "}
             <span className="text-green-500">Hα</span>,{" "}
-            <span className="text-red-500">Sii</span>,{" "}
-            <span className="text-blue-500">Oiii</span>
+            <span className="text-blue-500">OIII</span>
           </h6>
+        </ObjectInfo.Filters>
+        <ObjectInfo.Details>
+          <p>Object Type: Emission nebula</p>
+          <p>Declination: -24° 23′ 12″</p>
+          <p>Right Ascension: 18h 3m 37s</p>
+          <p>Imaging Type: Narrowband</p>
+          <p>Integration Time: 21 hours</p>
         </ObjectInfo.Details>
         <ObjectInfo.Description>
           <p>
@@ -42,7 +49,7 @@ const Dragons = ({ children }: { children: React.ReactNode }) => (
             egg".
           </p>
         </ObjectInfo.Description>
-        <ContinueButton text="Continue" href="/gallery/tarantula" />
+        <ContinueButton text="Continue" href="/gallery/southernpinwheel" />
       </ObjectInfo>
     </motion.div>
   </>

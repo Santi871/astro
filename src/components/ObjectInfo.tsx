@@ -26,8 +26,16 @@ const Subtitle = ({ children }: { children: React.ReactNode }) => {
   return <div className="text-xl">{children}</div>;
 };
 
+const Filters = ({ children }: { children: React.ReactNode }) => {
+  return <div className="mb-2 px-2 text-left text-xl">{children}</div>;
+};
+
 const Details = ({ children }: { children: React.ReactNode }) => {
-  return <div className="mb-8 px-2 text-left text-xl">{children}</div>;
+  return (
+    <div className="mb-4 w-full max-w-lg rounded p-2 text-center text-sm text-neutral-500">
+      {children}
+    </div>
+  );
 };
 
 const Description = ({ children }: { children: React.ReactNode }) => {
@@ -40,6 +48,7 @@ const Description = ({ children }: { children: React.ReactNode }) => {
 
 ObjectInfo.Title = Title;
 ObjectInfo.Subtitle = Subtitle;
+ObjectInfo.Filters = Filters;
 ObjectInfo.Details = Details;
 ObjectInfo.Description = Description;
 

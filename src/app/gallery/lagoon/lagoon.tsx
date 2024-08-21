@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import ContinueButton from "@/components/ContinueButton";
 import ObjectInfo from "@/components/ObjectInfo";
 
-const Carina = ({ children }: { children: React.ReactNode }) => (
+const Lagoon = ({ children }: { children: React.ReactNode }) => (
   <>
     <Navbar page="/" />
     <motion.div
@@ -18,10 +18,8 @@ const Carina = ({ children }: { children: React.ReactNode }) => (
         {children}
       </div>
       <ObjectInfo grow>
-        <ObjectInfo.Title>Eta Carina Widefield</ObjectInfo.Title>
-        <ObjectInfo.Subtitle>
-          Eta Carina Nebula, Running Chicken Nebula, Southern Pleiades cluster
-        </ObjectInfo.Subtitle>
+        <ObjectInfo.Title>Lagoon & Trifid</ObjectInfo.Title>
+        <ObjectInfo.Subtitle>Messier 8, Messier 20</ObjectInfo.Subtitle>
         <ObjectInfo.Filters>
           <h6>
             <span className="text-red-500">R</span>,{" "}
@@ -29,6 +27,13 @@ const Carina = ({ children }: { children: React.ReactNode }) => (
             <span className="text-blue-500">B</span>
           </h6>
         </ObjectInfo.Filters>
+        <ObjectInfo.Details>
+          <p>Object Type: Emission nebula</p>
+          <p>Declination: -24° 23′ 12″</p>
+          <p>Right Ascension: 18h 3m 37s</p>
+          <p>Imaging Type: Broadband</p>
+          <p>Integration Time: 9 hours per panel (2 panels)</p>
+        </ObjectInfo.Details>
         <ObjectInfo.Description>
           <p>
             One of the crown jewels of the southern sky, the Eta Carinae Nebula
@@ -48,4 +53,4 @@ const Carina = ({ children }: { children: React.ReactNode }) => (
   </>
 );
 
-export default Carina;
+export default Lagoon;

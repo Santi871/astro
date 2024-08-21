@@ -11,6 +11,7 @@ const DragonsPage = () => (
       fill
       priority
       quality={100}
+      unoptimized
     />
   </Dragons>
 );

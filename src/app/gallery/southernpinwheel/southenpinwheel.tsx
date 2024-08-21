@@ -6,22 +6,20 @@ import { motion } from "framer-motion";
 import ContinueButton from "@/components/ContinueButton";
 import ObjectInfo from "@/components/ObjectInfo";
 
-const Carina = ({ children }: { children: React.ReactNode }) => (
+const SouthernPinwheel = ({ children }: { children: React.ReactNode }) => (
   <>
     <Navbar page="/" />
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="items-center justify-between 2xl:flex"
+      className="items-center justify-between 2xl:flex 2xl:flex-row-reverse"
     >
-      <div className="relative h-[calc(100vh-120px)] gradient-mask-b-80 2xl:h-[calc(87vh-150px)] 2xl:min-h-screen 2xl:w-[180vw] 2xl:max-w-[130rem] 2xl:gradient-mask-r-80">
+      <div className="relative h-[calc(100vh-120px)] gradient-mask-b-80 2xl:h-[calc(87vh-150px)] 2xl:min-h-screen 2xl:w-[180vw] 2xl:max-w-[130rem] 2xl:gradient-mask-l-80">
         {children}
       </div>
       <ObjectInfo grow>
-        <ObjectInfo.Title>Eta Carina Widefield</ObjectInfo.Title>
-        <ObjectInfo.Subtitle>
-          Eta Carina Nebula, Running Chicken Nebula, Southern Pleiades cluster
-        </ObjectInfo.Subtitle>
+        <ObjectInfo.Title>Southern Pinwheel</ObjectInfo.Title>
+        <ObjectInfo.Subtitle>Messier 83</ObjectInfo.Subtitle>
         <ObjectInfo.Filters>
           <h6>
             <span className="text-red-500">R</span>,{" "}
@@ -42,10 +40,10 @@ const Carina = ({ children }: { children: React.ReactNode }) => (
             masses that is ready to go supernova "any cosmic day now".
           </p>
         </ObjectInfo.Description>
-        <ContinueButton text="Continue" href="/gallery/tarantula" />
+        <ContinueButton text="Continue" href="/gallery/montesalpes" />
       </ObjectInfo>
     </motion.div>
   </>
 );
 
-export default Carina;
+export default SouthernPinwheel;
