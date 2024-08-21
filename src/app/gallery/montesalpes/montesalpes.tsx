@@ -46,7 +46,7 @@ const MontesAlpes = ({ children }: { children: React.ReactNode }) => (
             masses that is ready to go supernova "any cosmic day now".
           </p>
         </ObjectInfo.Description>
-        <ContinueButton text="Continue" href="/gallery/lagoon" />
+        <ContinueButton text="Continue (5/9)" href="/gallery/lagoon" />
       </ObjectInfo>
     </motion.div>
   </>

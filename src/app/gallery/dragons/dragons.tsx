@@ -49,7 +49,10 @@ const Dragons = ({ children }: { children: React.ReactNode }) => (
             egg".
           </p>
         </ObjectInfo.Description>
-        <ContinueButton text="Continue" href="/gallery/southernpinwheel" />
+        <ContinueButton
+          text="Continue (3/9)"
+          href="/gallery/southernpinwheel"
+        />
       </ObjectInfo>
     </motion.div>
   </>

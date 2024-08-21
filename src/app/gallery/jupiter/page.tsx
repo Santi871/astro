@@ -1,26 +1,26 @@
 import React from "react";
-import Dragons from "./dragons";
+import Jupiter from "./jupiter";
 import FadeInImage from "@/components/FadeInImage";
 import Link from "next/link";
 
-const DragonsPage = () => {
+const JupiterPage = () => {
   const src =
-    "https://cdn.astrobin.com/thumbs/k7FfrMzfDyXS_1824x0_CvlzE9Ft.png";
+    "https://cdn.astrobin.com/thumbs/6oriK55tIl33_16536x0_ieTZ0INm.png";
   return (
-    <Dragons>
+    <Jupiter>
       <Link href={src}>
         <FadeInImage
           src={src}
-          alt="dragons"
-          className="z-50 cursor-pointer object-cover object-bottom transition-all"
+          alt="jupiter"
+          className="z-0 cursor-pointer object-cover transition-all"
           fill
           priority
           quality={100}
           unoptimized
         />
       </Link>
-    </Dragons>
+    </Jupiter>
   );
 };
 
-export default DragonsPage;
+export default JupiterPage;

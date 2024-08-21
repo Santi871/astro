@@ -40,7 +40,7 @@ const SouthernPinwheel = ({ children }: { children: React.ReactNode }) => (
             masses that is ready to go supernova "any cosmic day now".
           </p>
         </ObjectInfo.Description>
-        <ContinueButton text="Continue" href="/gallery/montesalpes" />
+        <ContinueButton text="Continue (4/9)" href="/gallery/montesalpes" />
       </ObjectInfo>
     </motion.div>
   </>

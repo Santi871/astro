@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import ContinueButton from "@/components/ContinueButton";
 import ObjectInfo from "@/components/ObjectInfo";
 
-const Lagoon = ({ children }: { children: React.ReactNode }) => (
+const LunarEclipse = ({ children }: { children: React.ReactNode }) => (
   <>
     <Navbar page="/" />
     <motion.div
@@ -18,8 +18,10 @@ const Lagoon = ({ children }: { children: React.ReactNode }) => (
         {children}
       </div>
       <ObjectInfo grow>
-        <ObjectInfo.Title>Lagoon & Trifid</ObjectInfo.Title>
-        <ObjectInfo.Subtitle>Messier 8, Messier 20</ObjectInfo.Subtitle>
+        <ObjectInfo.Title>Total Lunar Eclipse</ObjectInfo.Title>
+        <ObjectInfo.Subtitle>
+          15th of May 2022, Buenos Aires, Argentina
+        </ObjectInfo.Subtitle>
         <ObjectInfo.Filters>
           <h6>
             <span className="text-red-500">R</span>,{" "}
@@ -47,10 +49,10 @@ const Lagoon = ({ children }: { children: React.ReactNode }) => (
             masses that is ready to go supernova "any cosmic day now".
           </p>
         </ObjectInfo.Description>
-        <ContinueButton text="Continue (6/9)" href="/gallery/jupiter" />
+        <ContinueButton text="Continue (8/9)" href="/gallery/solareclipse" />
       </ObjectInfo>
     </motion.div>
   </>
 );
 
-export default Lagoon;
+export default LunarEclipse;

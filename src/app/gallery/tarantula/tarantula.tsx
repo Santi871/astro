@@ -40,7 +40,7 @@ const Tarantula = ({ children }: { children: React.ReactNode }) => (
             masses that is ready to go supernova "any cosmic day now".
           </p>
         </ObjectInfo.Description>
-        <ContinueButton text="Continue" href="/gallery/dragons" />
+        <ContinueButton text="Continue (2/9)" href="/gallery/dragons" />
       </ObjectInfo>
     </motion.div>
   </>

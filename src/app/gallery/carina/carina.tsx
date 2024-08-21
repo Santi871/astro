@@ -42,7 +42,7 @@ const Carina = ({ children }: { children: React.ReactNode }) => (
             masses that is ready to go supernova "any cosmic day now".
           </p>
         </ObjectInfo.Description>
-        <ContinueButton text="Continue" href="/gallery/tarantula" />
+        <ContinueButton text="Continue (1/9)" href="/gallery/tarantula" />
       </ObjectInfo>
     </motion.div>
   </>

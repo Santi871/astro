@@ -6,20 +6,20 @@ import { motion } from "framer-motion";
 import ContinueButton from "@/components/ContinueButton";
 import ObjectInfo from "@/components/ObjectInfo";
 
-const Lagoon = ({ children }: { children: React.ReactNode }) => (
+const Jupiter = ({ children }: { children: React.ReactNode }) => (
   <>
     <Navbar page="/" />
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="items-center justify-between 2xl:flex 2xl:flex-row-reverse"
+      className="items-center justify-between 2xl:flex"
     >
-      <div className="relative h-[calc(100vh-120px)] gradient-mask-b-80 2xl:h-[calc(87vh-150px)] 2xl:min-h-screen 2xl:w-[180vw] 2xl:max-w-[130rem] 2xl:gradient-mask-l-80">
+      <div className="relative h-[calc(100vh-120px)] gradient-mask-b-80 2xl:h-[calc(87vh-150px)] 2xl:min-h-screen 2xl:w-[180vw] 2xl:max-w-[130rem] 2xl:gradient-mask-r-80">
         {children}
       </div>
       <ObjectInfo grow>
-        <ObjectInfo.Title>Lagoon & Trifid</ObjectInfo.Title>
-        <ObjectInfo.Subtitle>Messier 8, Messier 20</ObjectInfo.Subtitle>
+        <ObjectInfo.Title>Jupiter & Moons</ObjectInfo.Title>
+        <ObjectInfo.Subtitle>Io, Ganymede, Europa</ObjectInfo.Subtitle>
         <ObjectInfo.Filters>
           <h6>
             <span className="text-red-500">R</span>,{" "}
@@ -47,10 +47,10 @@ const Lagoon = ({ children }: { children: React.ReactNode }) => (
             masses that is ready to go supernova "any cosmic day now".
           </p>
         </ObjectInfo.Description>
-        <ContinueButton text="Continue (6/9)" href="/gallery/jupiter" />
+        <ContinueButton text="Continue (7/9)" href="/gallery/lunareclipse" />
       </ObjectInfo>
     </motion.div>
   </>
 );
 
-export default Lagoon;
+export default Jupiter;

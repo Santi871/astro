@@ -17,12 +17,14 @@ const EquipmentPage = () => {
         >
           <p className="text-xl underline underline-offset-2">Telescopes</p>
           <p className="text-lg">AT-60ED / 5" Newtonian</p>
-          <p className="text-xl underline underline-offset-2">Mount</p>
-          <p className="text-lg">EQM-35</p>
+          <p className="text-xl underline underline-offset-2">Mounts</p>
+          <p className="text-lg">EQM-35 / Skywatcher Star Adventurer 2i</p>
           <p className="text-xl underline underline-offset-2">
             Imaging Cameras
           </p>
-          <p className="text-lg">ZWO ASI1600MM / ZWO ASI462MC</p>
+          <p className="text-lg">
+            ZWO ASI1600MM / ZWO ASI462MC / Fujifilm X-T30ii
+          </p>
           <p className="text-xl underline underline-offset-2">Filters</p>
           <p className="text-lg">
             ZWO LRGB 1.25" / Antlia SHO 3nm 1.25" / ZWO UVIR Cut 1.25"
