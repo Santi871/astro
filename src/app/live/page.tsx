@@ -116,12 +116,8 @@ const LivePage = () => {
             connected={connected}
           />
           {/* <div className="col-start-3 col-end-5 row-start-4 bg-black"></div> */}
-          <div className="h-96 w-96 rounded-xl bg-neutral-950 shadow-md">
-            <FadeInImage
-              src="https://raspberrypi.local/indi-allsky/images/ccd_11f566a5-7260-441a-9206-32527af7122b/exposures/20240820/night/20_22/ccd1_20240820_222242.jpg"
-              alt="allsky"
-              fill
-            />
+          <div className="hidden h-96 w-96 rounded-xl bg-neutral-950 shadow-md">
+            <FadeInImage src="" alt="allsky" fill />
           </div>
           <h6 className="col-span-full text-xl text-white underline">Camera</h6>
           <ScopeDataWindow

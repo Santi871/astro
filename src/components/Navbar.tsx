@@ -25,6 +25,8 @@ const Navbar = ({ page, noGradient = false }: NavbarProps) => (
     <a href="/equipment">
       <NavbarItem highlight={page === "/equipment"}>
         <p>Equipment</p>
+      </NavbarItem>
+    </a>
     <a href="/live">
       <NavbarItem highlight={page === "/live"}>
         <p>Live</p>

@@ -5,7 +5,7 @@ import React from "react";
 import FadeInImage from "./FadeInImage";
 import Link from "next/link";
 
-interface AstroImageProps {
+interface GalleryPreviewProps {
   title: string;
   src: string;
   href: string;
@@ -13,7 +13,13 @@ interface AstroImageProps {
   fit?: string;
 }
 
-const AstroImage = ({ title, src, href, alt, fit = "" }: AstroImageProps) => {
+const GalleryPreview = ({
+  title,
+  src,
+  href,
+  alt,
+  fit = "",
+}: GalleryPreviewProps) => {
   return (
     <motion.div
       whileHover={{ scale: 1.03 }}
@@ -27,7 +33,6 @@ const AstroImage = ({ title, src, href, alt, fit = "" }: AstroImageProps) => {
           src={src}
           alt={alt}
           className={`rounded-xl object-cover shadow-xl shadow-black/80 ${fit}`}
-          unoptimized
           fill
         />
       </Link>
