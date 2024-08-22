@@ -3,12 +3,12 @@
 import FadeInImage from "@/components/FadeInImage";
 import Navbar from "@/components/Navbar";
 import { AnimatePresence, motion } from "framer-motion";
-import React from "react";
+import React, { Suspense } from "react";
 import ContinueButton from "@/components/ContinueButton";
 
 const Home = () => {
   return (
-    <main className="right-10 flex min-h-screen items-end justify-center bg-black pt-36 2xl:items-center 2xl:justify-end">
+    <main className="flex min-h-screen items-end justify-center bg-black pt-36 2xl:items-center 2xl:justify-end">
       <Navbar page="/" />
       <AnimatePresence>
         <motion.div
@@ -25,9 +25,16 @@ const Home = () => {
             quality={100}
             fill
             priority
+            unoptimized
           />
           <div className="relative mb-8 2xl:right-24">
-            <ContinueButton text="Take a tour" href="/gallery/carina" animate />
+            <Suspense>
+              <ContinueButton
+                text="Take a tour"
+                href="/gallery/carina"
+                animate
+              />
+            </Suspense>
           </div>
         </motion.div>
       </AnimatePresence>

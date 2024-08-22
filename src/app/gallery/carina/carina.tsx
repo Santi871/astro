@@ -1,7 +1,7 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import React from "react";
+import React, { Suspense } from "react";
 import { motion } from "framer-motion";
 import ContinueButton from "@/components/ContinueButton";
 import ObjectInfo from "@/components/ObjectInfo";
@@ -22,13 +22,13 @@ const Carina = ({ children }: { children: React.ReactNode }) => (
         <ObjectInfo.Subtitle>
           Eta Carina Nebula, Running Chicken Nebula, Southern Pleiades cluster
         </ObjectInfo.Subtitle>
-        <ObjectInfo.Details>
+        <ObjectInfo.Filters>
           <h6>
             <span className="text-red-500">R</span>,{" "}
             <span className="text-green-500">G</span>,{" "}
             <span className="text-blue-500">B</span>
           </h6>
-        </ObjectInfo.Details>
+        </ObjectInfo.Filters>
         <ObjectInfo.Description>
           <p>
             One of the crown jewels of the southern sky, the Eta Carinae Nebula
@@ -42,7 +42,9 @@ const Carina = ({ children }: { children: React.ReactNode }) => (
             masses that is ready to go supernova "any cosmic day now".
           </p>
         </ObjectInfo.Description>
-        <ContinueButton text="Continue" href="/gallery/tarantula" />
+        <Suspense>
+          <ContinueButton text="Continue (1/9)" href="/gallery/tarantula" />
+        </Suspense>
       </ObjectInfo>
     </motion.div>
   </>

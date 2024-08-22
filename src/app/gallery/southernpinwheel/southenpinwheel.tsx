@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import ContinueButton from "@/components/ContinueButton";
 import ObjectInfo from "@/components/ObjectInfo";
 
-const Tarantula = ({ children }: { children: React.ReactNode }) => (
+const SouthernPinwheel = ({ children }: { children: React.ReactNode }) => (
   <>
     <Navbar page="/" />
     <motion.div
@@ -18,8 +18,8 @@ const Tarantula = ({ children }: { children: React.ReactNode }) => (
         {children}
       </div>
       <ObjectInfo grow>
-        <ObjectInfo.Title>Tarantula</ObjectInfo.Title>
-        <ObjectInfo.Subtitle>Large Magellanic Cloud</ObjectInfo.Subtitle>
+        <ObjectInfo.Title>Southern Pinwheel</ObjectInfo.Title>
+        <ObjectInfo.Subtitle>Messier 83</ObjectInfo.Subtitle>
         <ObjectInfo.Filters>
           <h6>
             <span className="text-red-500">R</span>,{" "}
@@ -29,26 +29,25 @@ const Tarantula = ({ children }: { children: React.ReactNode }) => (
         </ObjectInfo.Filters>
         <ObjectInfo.Description>
           <p>
-            The Tarantula Nebula is a colossal and vibrant star-forming region
-            located in the Large Magellanic Cloud, about 160,000 light-years
-            from Earth. It is the largest known nebula in our local universe and
-            is renowned for its intense activity and striking beauty. The
-            nebula's dynamic landscape is shaped by powerful stellar winds and
-            radiation from massive young stars, which illuminate the surrounding
-            gas and dust, creating a complex and colorful array of filaments and
-            cavities.
+            The Southern Pinwheel Galaxy, also known as Messier 83 or M83, is a
+            stunning spiral galaxy located about 15 million light-years away in
+            the constellation Hydra. It is one of the closest and most
+            well-studied barred spiral galaxies, offering a striking view of its
+            intricate structure. This galaxy showcases vivid regions of star
+            formation, with clusters of young, hot stars and nebulae that emit a
+            rich, colorful glow.
           </p>
           <p>
-            At its core lies the R136 star cluster, home to some of the most
-            massive and luminous stars ever discovered.
+            M83 is distinguished by its prominent central bar, sweeping spiral
+            arms, and bright, star-filled core.
           </p>
         </ObjectInfo.Description>
         <Suspense>
-          <ContinueButton text="Continue (2/9)" href="/gallery/dragons" />
+          <ContinueButton text="Continue (4/9)" href="/gallery/montesalpes" />
         </Suspense>
       </ObjectInfo>
     </motion.div>
   </>
 );
 
-export default Tarantula;
+export default SouthernPinwheel;

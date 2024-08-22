@@ -2,35 +2,36 @@
 
 import { motion } from "framer-motion";
 import React from "react";
-import Image from "next/image";
+import FadeInImage from "./FadeInImage";
+import Link from "next/link";
 
-interface GalleryPreviewProps {
-  url: string;
+interface AstroImageProps {
+  title: string;
+  src: string;
+  href: string;
   alt: string;
+  fit?: string;
 }
 
-const GalleryPreview = ({ url, alt }: GalleryPreviewProps) => {
+const AstroImage = ({ title, src, href, alt, fit = "" }: AstroImageProps) => {
   return (
-    <>
-      <motion.div
-        whileHover={{ scale: 1.03 }}
-        className="relative h-[36rem] w-5/6 cursor-pointer lg:max-w-screen-2xl"
-      >
-        <div className="group relative h-[36rem]">
-          <div className="duration-800 absolute -inset-1 rounded-lg bg-gradient-to-r from-green-600 via-blue-600 to-pink-600 opacity-0 blur-3xl transition group-hover:opacity-20 group-hover:duration-200"></div>
-          <motion.div className="relative top-4 z-50 m-4 h-24 w-48 rounded-xl bg-neutral-950/70 p-4 font-mono text-neutral-300">
-            Eta Carina Nebula
-          </motion.div>
-          <Image
-            src={url}
-            alt={alt}
-            className="rounded-xl object-cover shadow-none transition-all hover:shadow-2xl"
-            unoptimized
-            fill
-          />
-        </div>
-      </motion.div>
-    </>
+    <motion.div
+      whileHover={{ scale: 1.03 }}
+      className="relative h-[36rem] w-5/6 cursor-pointer lg:max-w-screen-2xl"
+    >
+      <Link href={href}>
+        <motion.div className="relative z-50 m-4 max-w-48 rounded-xl bg-neutral-950/50 p-2 text-center font-mono text-neutral-300 backdrop-blur-sm 2xl:text-lg">
+          {title}
+        </motion.div>
+        <FadeInImage
+          src={src}
+          alt={alt}
+          className={`rounded-xl object-cover shadow-xl shadow-black/80 ${fit}`}
+          unoptimized
+          fill
+        />
+      </Link>
+    </motion.div>
   );
 };
 

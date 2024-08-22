@@ -3,20 +3,63 @@
 import GalleryPreview from "@/components/AstroImage";
 import Navbar from "@/components/Navbar";
 
-const GalleryPage = () => (
-  <main className="flex min-h-screen flex-col items-center justify-start gap-8 bg-neutral-950 pb-12 pt-32">
+const Gallery = () => (
+  <main className="flex min-h-screen flex-col items-center justify-start gap-8 bg-neutral-950 pb-8 pt-16 2xl:pt-36">
     <Navbar page="/gallery" />
-    <GalleryPreview
-      url="https://cdn.astrobin.com/thumbs/k7FfrMzfDyXS_1824x0_CvlzE9Ft.png"
-      alt="eta-carina-nebula"
+    <AstroImage
+      title="Dragons of Ara"
+      href="/gallery/dragons?from=gallery"
+      src="https://cdn.astrobin.com/thumbs/k7FfrMzfDyXS_1824x0_CvlzE9Ft.png"
+      alt="dragons"
     />
-    <GalleryPreview
-      url="https://cdn.astrobin.com/thumbs/rn81q3KRsUAs_1000x380_RdoU4IF5.png"
-      alt="asd"
+    <AstroImage
+      title="Tarantula Nebula"
+      href="/gallery/tarantula?from=gallery"
+      src="https://cdn.astrobin.com/thumbs/Im42TMp2oNI1_16536x0_ieTZ0INm.jpg"
+      alt="tarantula"
+      fit="object-top"
     />
-    <GalleryPreview
-      url="https://cdn.astrobin.com/thumbs/rn81q3KRsUAs_1000x380_RdoU4IF5.png"
-      alt="asd"
+    <AstroImage
+      title="Eta Carina Nebula"
+      href="/gallery/carina?from=gallery"
+      src="https://cdn.astrobin.com/thumbs/eTeJngp4--ae_16536x0_ieTZ0INm.jpg"
+      alt="carina"
+    />
+    <AstroImage
+      title="Southern Pinwheel Galaxy"
+      href="/gallery/southernpinwheel?from=gallery"
+      src="https://cdn.astrobin.com/thumbs/SjcqYZ9i7NIJ_16536x0_ieTZ0INm.jpg"
+      alt="southernpinwheel"
+    />
+    <AstroImage
+      title="Lagoon Nebula"
+      href="/gallery/lagoon?from=gallery"
+      src="https://cdn.astrobin.com/thumbs/9jd9U8PpJFPj_16536x0_ieTZ0INm.jpg"
+      alt="lagoon"
+    />
+    <AstroImage
+      title="Montes Alpes"
+      href="/gallery/montesalpes?from=gallery"
+      src="https://cdn.astrobin.com/thumbs/2KN4nsyoFHCS_16536x0_ieTZ0INm.jpg"
+      alt="montesalpes"
+    />
+    <AstroImage
+      title="Total Lunar Eclipse"
+      href="/gallery/lunareclipse?from=gallery"
+      src="https://i.imgur.com/eT2bKaJ.jpeg"
+      alt="lunareclipse"
+    />
+    <AstroImage
+      title="Total Solar Eclipse"
+      href="/gallery/solareclipse?from=gallery"
+      src="https://i.imgur.com/TErAy0w.jpeg"
+      alt="solareclipse"
+    />
+    <AstroImage
+      title="Jupiter & Moons"
+      href="/gallery/jupiter?from=gallery"
+      src="https://cdn.astrobin.com/thumbs/6oriK55tIl33_16536x0_ieTZ0INm.png"
+      alt="jupiter"
     />
   </main>
 );

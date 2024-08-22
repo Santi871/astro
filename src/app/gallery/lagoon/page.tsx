@@ -1,26 +1,26 @@
 import React from "react";
-import Dragons from "./dragons";
+import Lagoon from "./lagoon";
 import FadeInImage from "@/components/FadeInImage";
 import Link from "next/link";
 
-const DragonsPage = () => {
+const LagoonPage = () => {
   const src =
-    "https://cdn.astrobin.com/thumbs/k7FfrMzfDyXS_1824x0_CvlzE9Ft.png";
+    "https://cdn.astrobin.com/thumbs/9jd9U8PpJFPj_16536x0_ieTZ0INm.jpg";
   return (
-    <Dragons>
+    <Lagoon>
       <Link href={src}>
         <FadeInImage
           src={src}
-          alt="dragons"
-          className="z-50 cursor-pointer object-cover object-bottom transition-all"
+          alt="lagoon"
+          className="z-0 cursor-pointer object-cover transition-all"
           fill
           priority
           quality={100}
           unoptimized
         />
       </Link>
-    </Dragons>
+    </Lagoon>
   );
 };
 
-export default DragonsPage;
+export default LagoonPage;

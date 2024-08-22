@@ -1,17 +1,16 @@
 import React from "react";
-import Tarantula from "./tarantula";
+import SolarEclipse from "./solareclipse";
 import FadeInImage from "@/components/FadeInImage";
 import Link from "next/link";
 
-const TarantulaPage = () => {
-  const src =
-    "https://cdn.astrobin.com/thumbs/Im42TMp2oNI1_16536x0_ieTZ0INm.jpg";
+const JupiterPage = () => {
+  const src = "https://i.imgur.com/TErAy0w.jpeg";
   return (
-    <Tarantula>
+    <SolarEclipse>
       <Link href={src}>
         <FadeInImage
           src={src}
-          alt="tarantula"
+          alt="solar-eclipse"
           className="z-0 cursor-pointer object-cover transition-all"
           fill
           priority
@@ -19,8 +18,8 @@ const TarantulaPage = () => {
           unoptimized
         />
       </Link>
-    </Tarantula>
+    </SolarEclipse>
   );
 };
 
-export default TarantulaPage;
+export default JupiterPage;

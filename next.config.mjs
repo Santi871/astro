@@ -15,6 +15,12 @@ const nextConfig = {
                 hostname: 'cdn.discordapp.com',
                 port: '',
                 pathname: '/attachments/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'i.imgur.com',
+                port: '',
+                pathname: '/**',
             }
         ]
     }

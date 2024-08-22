@@ -10,7 +10,7 @@ interface NavbarProps {
 
 const Navbar = ({ page, noGradient = false }: NavbarProps) => (
   <nav
-    className={`fixed top-0 z-10 flex w-screen justify-center ${noGradient ? "" : "bg-gradient-to-t"} from-black/0 to-black/80 p-2 text-center text-white md:gap-5 2xl:p-10`}
+    className={`fixed top-0 z-50 flex w-screen justify-center ${noGradient ? "" : "bg-gradient-to-t"} from-black/0 to-black/80 p-2 text-center text-white md:gap-5 2xl:p-10`}
   >
     <Link href="/">
       <NavbarItem highlight={page === "/"}>
@@ -22,6 +22,9 @@ const Navbar = ({ page, noGradient = false }: NavbarProps) => (
         <p>Gallery</p>
       </NavbarItem>
     </a>
+    <a href="/equipment">
+      <NavbarItem highlight={page === "/equipment"}>
+        <p>Equipment</p>
     <a href="/live">
       <NavbarItem highlight={page === "/live"}>
         <p>Live</p>
@@ -29,7 +32,7 @@ const Navbar = ({ page, noGradient = false }: NavbarProps) => (
     </a>
     <a href="https://astro.santivegega.com" target="_blank">
       <NavbarItem>
-        <p>Equipment</p>
+        <p>Contact</p>
       </NavbarItem>
     </a>
   </nav>
