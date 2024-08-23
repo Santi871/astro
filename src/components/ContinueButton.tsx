@@ -22,7 +22,7 @@ const ContinueButton = ({ text, href, animate = false }: NextImageProps) => {
   return (
     <motion.div key="tour-button" className="z-0">
       <Link
-        className="relative flex flex-col items-center justify-center gap-5 2xl:text-2xl"
+        className="relative flex flex-col items-center justify-center gap-5 text-lg 2xl:text-2xl"
         href={fromGallery ? "/gallery" : href}
         prefetch
       >

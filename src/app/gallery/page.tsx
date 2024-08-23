@@ -4,7 +4,7 @@ import AstroImage from "@/components/AstroImage";
 import Navbar from "@/components/Navbar";
 
 const Gallery = () => (
-  <main className="flex min-h-screen flex-col items-center justify-start gap-8 bg-neutral-950 pb-8 pt-16 2xl:pt-36">
+  <main className="flex min-h-screen flex-col items-center justify-start gap-8 bg-neutral-950 pb-8 pt-20 md:pt-24 2xl:pt-36">
     <Navbar page="/gallery" />
     <AstroImage
       title="Dragons of Ara"
