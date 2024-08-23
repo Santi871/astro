@@ -27,7 +27,7 @@ const ContinueButton = ({ text, href, animate = false }: NextImageProps) => {
         prefetch
       >
         <motion.div
-          whileHover={{ scale: 1.15 }}
+          whileTap={{ scale: 0.85 }}
           className={`flex flex-col items-center ${animate ? "gap-3" : "gap-2 2xl:gap-3"}`}
         >
           <p>{fromGallery ? "Return" : text}</p>
