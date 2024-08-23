@@ -10,7 +10,7 @@ function Counter({ value }: { value: number }) {
   return (
     <div
       style={{ fontSize }}
-      className="flex w-[9rem] justify-evenly gap-3 overflow-hidden rounded bg-neutral-950 px-2 shadow-md"
+      className="flex justify-end gap-3 overflow-hidden rounded bg-neutral-950 px-4 shadow-md"
     >
       {value < 0 ? <p>-</p> : <Digit place={100} value={Math.abs(value)} />}
       <Digit place={10} value={Math.abs(value)} />

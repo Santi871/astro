@@ -42,6 +42,7 @@ interface PromQlQueryData {
 const LivePage = () => {
   const [connection, setConnection] = useState<HubConnection | null>(null);
   const [connected, setConnected] = useState<boolean>(false);
+  const [connectError, setConnectError] = useState<boolean>(false);
   const [mountAlt, setMountAlt] = useState<number | null>();
   const [lastRefresh, setLastRefresh] = useState<number | null>();
 
@@ -56,6 +57,7 @@ const LivePage = () => {
       .start()
       .then(() => {
         setConnected(true);
+        setConnectError(false);
         connect.onclose(() => setConnected(false));
         connect.on("SendStatus", (data: string) => {
           const result: PromQlQuery = JSON.parse(data);
@@ -65,13 +67,15 @@ const LivePage = () => {
         // connect?.invoke("FetchStatus");
         setInterval(() => {
           console.log("invoke");
-          connect?.invoke("FetchStatus");
+          connect?.invoke("FetchStatus").catch(() => setConnectError(true));
         }, 5000);
       })
 
-      .catch((err) =>
-        console.error("Error while connecting to SignalR Hub:", err),
-      );
+      .catch((err) => {
+        console.error("Error while connecting to SignalR Hub:", err);
+        setConnectError(true);
+        setConnected(false);
+      });
 
     return () => {
       if (connection) {
@@ -86,11 +90,10 @@ const LivePage = () => {
       className={`flex min-h-screen flex-col items-center justify-start gap-8 bg-neutral-950 pb-12 pt-32 ${connected && lastRefresh ? "text-white" : "text-neutral-600"} transition-all`}
     >
       <Navbar page="/live" />
-      <div className="flex flex-col items-center justify-start gap-2 rounded-xl bg-neutral-900 p-4 underline-offset-4 shadow-xl">
+      <div className="flex flex-col items-center justify-start gap-3 rounded-xl bg-neutral-900 p-5 underline-offset-4 shadow-xl">
+        <h2 className="text-3xl text-white">Live Telescope Telemetry</h2>
         <ScopeDataSection>
-          <h6 className="col-span-full text-xl text-white underline">
-            Telescope
-          </h6>
+          <h6 className="col-span-full text-xl text-white underline">Mount</h6>
           <ScopeDataWindow
             name="Altitude"
             unit="deg"
@@ -115,11 +118,10 @@ const LivePage = () => {
             value={mountAlt}
             connected={connected}
           />
-          {/* <div className="col-start-3 col-end-5 row-start-4 bg-black"></div> */}
-          <div className="hidden h-96 w-96 rounded-xl bg-neutral-950 shadow-md">
-            <FadeInImage src="" alt="allsky" fill />
+          <div className="col-start-3 col-end-5 row-start-3 row-end-8 my-2 hidden items-center justify-center rounded-xl bg-neutral-950 text-center shadow-md lg:flex">
+            <p className="text-neutral-600">Image unavailable</p>
           </div>
-          <h6 className="col-span-full text-xl text-white underline">Camera</h6>
+          <h6 className="col-span-2 text-xl text-white underline">Camera</h6>
           <ScopeDataWindow
             name="Sensor Temp"
             unit="°C"
@@ -132,7 +134,7 @@ const LivePage = () => {
             value={mountAlt}
             connected={connected}
           />
-          <h6 className="col-span-full text-xl text-white underline">Guider</h6>
+          <h6 className="col-span-2 text-xl text-white underline">Guider</h6>
           <ScopeDataWindow
             name="RA Error"
             unit="arcsec"
@@ -145,7 +147,7 @@ const LivePage = () => {
             value={mountAlt}
             connected={connected}
           />
-          <h6 className="col-span-full text-xl text-white underline">
+          <h6 className="col-span-2 text-xl text-white underline">
             Latest Image
           </h6>
           <ScopeDataWindow
@@ -175,10 +177,10 @@ const LivePage = () => {
         </ScopeDataSection>
         <div className="flex flex-none items-center justify-start gap-2 place-self-end text-sm text-neutral-500">
           <div
-            className={`h-2 w-2 rounded-full ${connected ? "bg-green-500" : "bg-red-500"}`}
+            className={`h-2 w-2 rounded-full ${connected ? "bg-green-500" : connectError ? "bg-red-500" : "bg-neutral-500"} transition-colors`}
           />
           <div className="flex items-center justify-center gap-1">
-            {connected ? "Connected" : "Disconnected"}{" "}
+            Backend
             {connected && lastRefresh && (
               <ReactTimeAgo
                 date={new Date(lastRefresh * 1000)}
