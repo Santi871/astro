@@ -20,13 +20,7 @@ const MontesAlpes = ({ children }: { children: React.ReactNode }) => (
       <ObjectInfo grow>
         <ObjectInfo.Title>Montes Alpes</ObjectInfo.Title>
         <ObjectInfo.Subtitle>Messier 83</ObjectInfo.Subtitle>
-        <ObjectInfo.Filters>
-          <h6>
-            <span className="text-red-500">R</span>,{" "}
-            <span className="text-green-500">G</span>,{" "}
-            <span className="text-blue-500">B</span>
-          </h6>
-        </ObjectInfo.Filters>
+        <ObjectInfo.Filters type="rgb" />
         <ObjectInfo.Details>
           <p>Imaging Type: Lucky Imaging</p>
           <p>Focal Length: 1800mm</p>

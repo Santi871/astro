@@ -20,19 +20,12 @@ const Jupiter = ({ children }: { children: React.ReactNode }) => (
       <ObjectInfo grow>
         <ObjectInfo.Title>Jupiter & Moons</ObjectInfo.Title>
         <ObjectInfo.Subtitle>Io, Ganymede, Europa</ObjectInfo.Subtitle>
-        <ObjectInfo.Filters>
-          <h6>
-            <span className="text-red-500">R</span>,{" "}
-            <span className="text-green-500">G</span>,{" "}
-            <span className="text-blue-500">B</span>
-          </h6>
-        </ObjectInfo.Filters>
+        <ObjectInfo.Filters type="rgb" />
         <ObjectInfo.Details>
-          <p>Object Type: Emission nebula</p>
-          <p>Declination: -24° 23′ 12″</p>
-          <p>Right Ascension: 18h 3m 37s</p>
-          <p>Imaging Type: Broadband</p>
-          <p>Integration Time: 9 hours per panel (2 panels)</p>
+          <p>Imaging Type: Lucky Imaging</p>
+          <p>Focal Length: 1800mm</p>
+          <p>Aperture: 130mm</p>
+          <p>Pixel size: 2.9μm</p>
         </ObjectInfo.Details>
         <ObjectInfo.Description>
           <p>

@@ -19,14 +19,16 @@ const Tarantula = ({ children }: { children: React.ReactNode }) => (
       </div>
       <ObjectInfo grow>
         <ObjectInfo.Title>Tarantula</ObjectInfo.Title>
-        <ObjectInfo.Subtitle>Large Magellanic Cloud</ObjectInfo.Subtitle>
-        <ObjectInfo.Filters>
-          <h6>
-            <span className="text-red-500">R</span>,{" "}
-            <span className="text-green-500">G</span>,{" "}
-            <span className="text-blue-500">B</span>
-          </h6>
-        </ObjectInfo.Filters>
+        <ObjectInfo.Subtitle>
+          Star forming region in the Large Magellanic Cloud
+        </ObjectInfo.Subtitle>
+        <ObjectInfo.Filters type="sho" />
+        <ObjectInfo.Details>
+          <p>Object Type: Emission nebula, star clusters</p>
+          <p>Right Ascension: 5h 38m 38s</p>
+          <p>Declination: -69° 5′ 42″</p>
+          <p>Integration Time: 34 hours</p>
+        </ObjectInfo.Details>
         <ObjectInfo.Description>
           <p>
             The Tarantula Nebula is a colossal and vibrant star-forming region

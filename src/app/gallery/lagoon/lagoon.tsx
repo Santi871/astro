@@ -20,34 +20,26 @@ const Lagoon = ({ children }: { children: React.ReactNode }) => (
       <ObjectInfo grow>
         <ObjectInfo.Title>Lagoon & Trifid</ObjectInfo.Title>
         <ObjectInfo.Subtitle>Messier 8, Messier 20</ObjectInfo.Subtitle>
-        <ObjectInfo.Filters>
-          <h6>
-            <span className="text-red-500">R</span>,{" "}
-            <span className="text-green-500">G</span>,{" "}
-            <span className="text-blue-500">B</span>
-          </h6>
-        </ObjectInfo.Filters>
+        <ObjectInfo.Filters type="rgb" />
         <ObjectInfo.Details>
-          <p>Object Type: Emission nebula</p>
-          <p>Declination: -24° 23′ 12″</p>
+          <p>Object Type: Emission/reflection/dark nebula</p>
           <p>Right Ascension: 18h 3m 37s</p>
-          <p>Imaging Type: Broadband</p>
+          <p>Declination: -24° 23′ 12″</p>
           <p>Integration Time: 9 hours per panel (2 panels)</p>
         </ObjectInfo.Details>
         <ObjectInfo.Description>
           <p>
-            The Lagoon Nebula (M8): This vibrant emission nebula is about 4,000
-            to 6,000 light-years from Earth and spans roughly 110 light-years
-            across. It is renowned for its bright, intricate structure,
-            featuring a central region of intense star formation. The nebula is
-            illuminated by young, massive stars that energize the surrounding
-            gas and dust, creating a striking mix of glowing red regions and
-            dark, opaque filaments. The Lagoon Nebula is one of the largest and
-            most active stellar nurseries visible from Earth.
+            The Lagoon nebula is about 4,000 to 6,000 light-years from Earth and
+            spans roughly 110 light-years across. It is renowned for its bright,
+            intricate structure, featuring a central region of intense star
+            formation. The nebula is illuminated by young, massive stars that
+            energize the surrounding gas and dust, creating a striking mix of
+            glowing red regions and dark, opaque filaments. The Lagoon Nebula is
+            one of the largest and most active stellar nurseries visible from
+            Earth.
           </p>
           <p>
-            The Trifid Nebula (M20): Located about 5,200 light-years away, the
-            Trifid Nebula is a fascinating and complex region of space. It is a
+            Alongside it near the top of the image is the Trifid Nebula, a
             combination of an emission nebula, reflection nebula, and dark
             nebula, giving it a distinctive appearance. The nebula is known for
             its three-lobed shape, which is the result of dark dust lanes

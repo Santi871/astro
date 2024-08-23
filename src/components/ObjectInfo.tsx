@@ -26,13 +26,36 @@ const Subtitle = ({ children }: { children: React.ReactNode }) => {
   return <div className="text-xl">{children}</div>;
 };
 
-const Filters = ({ children }: { children: React.ReactNode }) => {
-  return <div className="mb-2 px-2 text-left text-xl">{children}</div>;
+const Filters = ({ type }: { type: "rgb" | "sho" }) => {
+  const renderFilters = () => {
+    switch (type) {
+      case "rgb":
+        return (
+          <h6>
+            <span className="text-red-500">R</span>,{" "}
+            <span className="text-green-500">G</span>,{" "}
+            <span className="text-blue-500">B</span>
+          </h6>
+        );
+      case "sho":
+        return (
+          <h6>
+            <span className="text-red-500">SII</span>,{" "}
+            <span className="text-green-500">Hα</span>,{" "}
+            <span className="text-blue-500">OIII</span>
+          </h6>
+        );
+      default:
+        return null;
+    }
+  };
+
+  return <div className="mb-2 px-2 text-left text-xl">{renderFilters()}</div>;
 };
 
 const Details = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="mb-4 w-full max-w-lg rounded p-2 text-center text-sm text-neutral-500">
+    <div className="mb-4 w-full max-w-lg rounded text-left text-sm text-neutral-500">
       {children}
     </div>
   );

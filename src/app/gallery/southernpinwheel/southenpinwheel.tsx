@@ -20,13 +20,13 @@ const SouthernPinwheel = ({ children }: { children: React.ReactNode }) => (
       <ObjectInfo grow>
         <ObjectInfo.Title>Southern Pinwheel</ObjectInfo.Title>
         <ObjectInfo.Subtitle>Messier 83</ObjectInfo.Subtitle>
-        <ObjectInfo.Filters>
-          <h6>
-            <span className="text-red-500">R</span>,{" "}
-            <span className="text-green-500">G</span>,{" "}
-            <span className="text-blue-500">B</span>
-          </h6>
-        </ObjectInfo.Filters>
+        <ObjectInfo.Filters type="rgb" />
+        <ObjectInfo.Details>
+          <p>Object Type: Barred spiral galaxy</p>
+          <p>Right Ascension: 13h 37m 1s</p>
+          <p>Declination: −29° 51′ 56.74″</p>
+          <p>Integration Time: 17 hours</p>
+        </ObjectInfo.Details>
         <ObjectInfo.Description>
           <p>
             The Southern Pinwheel Galaxy, also known as Messier 83 or M83, is a
