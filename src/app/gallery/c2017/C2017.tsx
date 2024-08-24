@@ -18,14 +18,14 @@ const C2017 = ({ children }: { children: React.ReactNode }) => (
         {children}
       </div>
       <ObjectInfo grow>
-        <ObjectInfo.Title>C/2017 K2 (PanSTARRS)</ObjectInfo.Title>
+        <ObjectInfo.Title>C/2017 K2 passes by M10</ObjectInfo.Title>
         <ObjectInfo.Subtitle>July 15th 2022</ObjectInfo.Subtitle>
         <ObjectInfo.Filters type="mono" />
         <ObjectInfo.Details>
           <p>Object Type: Long-period comet</p>
-          <p>Right Ascension: 5h 38m 38s</p>
-          <p>Declination: -69° 5′ 42″</p>
-          <p>Integration Time: 34 hours</p>
+          <p>Right Ascension: 16h 57m 9s</p>
+          <p>Declination: −4° 5′ 58.07″</p>
+          <p>Timelapse Time: 2 hours</p>
         </ObjectInfo.Details>
         <ObjectInfo.Description>
           <p>
