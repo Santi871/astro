@@ -41,9 +41,8 @@ const SolarEclipse = ({ children }: { children: React.ReactNode }) => (
             celebrations.
           </p>
         </ObjectInfo.Description>
-        <h6 className="text-3xl">Thanks for visiting!</h6>
         <Suspense>
-          <ContinueButton text="Continue to gallery" href="/gallery" />
+          <ContinueButton text="Continue (9/10)" href="/gallery/c2017" />
         </Suspense>
       </ObjectInfo>
     </motion.div>
