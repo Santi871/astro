@@ -19,7 +19,7 @@ const MontesAlpes = ({ children }: { children: React.ReactNode }) => (
       </div>
       <ObjectInfo grow>
         <ObjectInfo.Title>Montes Alpes</ObjectInfo.Title>
-        <ObjectInfo.Subtitle>Messier 83</ObjectInfo.Subtitle>
+        <ObjectInfo.Subtitle>Lunar Mountain Range</ObjectInfo.Subtitle>
         <ObjectInfo.Filters type="rgb" />
         <ObjectInfo.Details>
           <p>Imaging Type: Lucky Imaging</p>
