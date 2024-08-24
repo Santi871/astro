@@ -49,7 +49,7 @@ const Lagoon = ({ children }: { children: React.ReactNode }) => (
           </p>
         </ObjectInfo.Description>
         <Suspense>
-          <ContinueButton text="Continue (6/9)" href="/gallery/jupiter" />
+          <ContinueButton text="Continue (6/10)" href="/gallery/jupiter" />
         </Suspense>
       </ObjectInfo>
     </motion.div>

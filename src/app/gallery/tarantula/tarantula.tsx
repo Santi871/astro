@@ -46,7 +46,7 @@ const Tarantula = ({ children }: { children: React.ReactNode }) => (
           </p>
         </ObjectInfo.Description>
         <Suspense>
-          <ContinueButton text="Continue (2/9)" href="/gallery/dragons" />
+          <ContinueButton text="Continue (2/10)" href="/gallery/dragons" />
         </Suspense>
       </ObjectInfo>
     </motion.div>

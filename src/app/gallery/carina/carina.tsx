@@ -43,7 +43,7 @@ const Carina = ({ children }: { children: React.ReactNode }) => (
           </p>
         </ObjectInfo.Description>
         <Suspense>
-          <ContinueButton text="Continue (1/9)" href="/gallery/tarantula" />
+          <ContinueButton text="Continue (1/10)" href="/gallery/tarantula" />
         </Suspense>
       </ObjectInfo>
     </motion.div>
