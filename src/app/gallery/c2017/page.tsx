@@ -13,7 +13,7 @@ const C2017Page = () => {
         className="h-full w-full object-cover object-left"
       >
         <source
-          src="https://zipline.santi871.com/u/XxTvEm.mp4"
+          src="https://zipline.santi871.com/u/uTz0RT.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
