@@ -45,7 +45,7 @@ const Dragons = ({ children }: { children: React.ReactNode }) => (
         </ObjectInfo.Description>
         <Suspense>
           <ContinueButton
-            text="Continue (3/9)"
+            text="Continue (3/10)"
             href="/gallery/southernpinwheel"
           />
         </Suspense>

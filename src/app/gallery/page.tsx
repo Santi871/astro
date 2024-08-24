@@ -61,6 +61,12 @@ const Gallery = () => (
       src="https://cdn.astrobin.com/thumbs/6oriK55tIl33_16536x0_ieTZ0INm.png"
       alt="jupiter"
     />
+    <AstroImage
+      title="C/2017 K2"
+      href="/gallery/c2017?from=gallery"
+      src="https://zipline.santi871.com/u/7qZ9oH.png"
+      alt="c2017"
+    />
   </main>
 );
 

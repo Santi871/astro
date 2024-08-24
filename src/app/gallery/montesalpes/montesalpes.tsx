@@ -45,7 +45,7 @@ const MontesAlpes = ({ children }: { children: React.ReactNode }) => (
           </p>
         </ObjectInfo.Description>
         <Suspense>
-          <ContinueButton text="Continue (5/9)" href="/gallery/lagoon" />
+          <ContinueButton text="Continue (5/10)" href="/gallery/lagoon" />
         </Suspense>
       </ObjectInfo>
     </motion.div>

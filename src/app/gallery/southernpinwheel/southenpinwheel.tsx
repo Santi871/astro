@@ -43,7 +43,7 @@ const SouthernPinwheel = ({ children }: { children: React.ReactNode }) => (
           </p>
         </ObjectInfo.Description>
         <Suspense>
-          <ContinueButton text="Continue (4/9)" href="/gallery/montesalpes" />
+          <ContinueButton text="Continue (4/10)" href="/gallery/montesalpes" />
         </Suspense>
       </ObjectInfo>
     </motion.div>

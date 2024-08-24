@@ -26,7 +26,7 @@ const Subtitle = ({ children }: { children: React.ReactNode }) => {
   return <div className="text-xl">{children}</div>;
 };
 
-const Filters = ({ type }: { type: "rgb" | "sho" }) => {
+const Filters = ({ type }: { type: "rgb" | "sho" | "mono" }) => {
   const renderFilters = () => {
     switch (type) {
       case "rgb":
@@ -45,6 +45,8 @@ const Filters = ({ type }: { type: "rgb" | "sho" }) => {
             <span className="text-blue-500">OIII</span>
           </h6>
         );
+      case "mono":
+        return <h6 className="text-white">Monochrome</h6>;
       default:
         return null;
     }

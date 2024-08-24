@@ -42,7 +42,7 @@ const Jupiter = ({ children }: { children: React.ReactNode }) => (
           </p>
         </ObjectInfo.Description>
         <Suspense>
-          <ContinueButton text="Continue (6/9)" href="/gallery/lunareclipse" />
+          <ContinueButton text="Continue (7/10)" href="/gallery/lunareclipse" />
         </Suspense>
       </ObjectInfo>
     </motion.div>

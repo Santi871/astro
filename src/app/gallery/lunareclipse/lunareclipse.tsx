@@ -38,7 +38,7 @@ const LunarEclipse = ({ children }: { children: React.ReactNode }) => (
           </p>
         </ObjectInfo.Description>
         <Suspense>
-          <ContinueButton text="Continue (8/9)" href="/gallery/solareclipse" />
+          <ContinueButton text="Continue (8/10)" href="/gallery/solareclipse" />
         </Suspense>
       </ObjectInfo>
     </motion.div>
