@@ -37,10 +37,6 @@ const Carina = ({ children }: { children: React.ReactNode }) => (
             Milky Way galaxy. The nebula is approximately 8,500 light-years from
             Earth.
           </p>
-          <p>
-            The title star, η (eta) Carinae, is a supergiant of about 100 solar
-            masses that is ready to go supernova "any cosmic day now".
-          </p>
         </ObjectInfo.Description>
         <Suspense>
           <ContinueButton text="Continue (1/10)" href="/gallery/tarantula" />

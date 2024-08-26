@@ -40,8 +40,7 @@ const MontesAlpes = ({ children }: { children: React.ReactNode }) => (
             significant stop in the vicinity of the Montes Alpes. The Lunar
             Module, "Falcon," landed in the nearby Hadley-Apennine region,
             allowing astronauts David Scott and James Irwin to explore the area.
-            Their exploration included visits to the base of the Montes Alpes,
-            where they collected samples and conducted experiments.
+            Their exploration included visits to the base of the Montes Alpes.
           </p>
         </ObjectInfo.Description>
         <Suspense>

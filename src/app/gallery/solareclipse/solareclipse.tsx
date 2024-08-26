@@ -28,15 +28,13 @@ const SolarEclipse = ({ children }: { children: React.ReactNode }) => (
             dramatic beauty but also for its wide path of totality, which
             crossed a significant portion of North America, including Mexico,
             the United States, and Canada. As the moon slid across the sun,
-            millions of observers experienced the awe-inspiring transformation
-            of day into night. The eclipse reached its totality at approximately
-            1:30 PM EDT
+            millions of observers experienced the transformation of day into
+            night. The eclipse reached its totality at approximately 1:30 PM EDT
           </p>
           <p>
-            This event was particularly remarkable for its accessibility. The
-            path of totality was long and wide, allowing a larger swath of
-            people than usual to experience the total eclipse, creating a shared
-            moment of wonder across diverse regions. Cities and towns across the
+            This event was remarkable for its accessibility. The path of
+            totality was long and wide, allowing a larger swath of people than
+            usual to experience the total eclipse. Cities and towns across the
             path hosted viewing events, educational activities, and
             celebrations.
           </p>

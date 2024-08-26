@@ -12,9 +12,9 @@ const Lagoon = ({ children }: { children: React.ReactNode }) => (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="items-center justify-between 2xl:flex 2xl:flex-row-reverse"
+      className="items-center justify-between 2xl:flex"
     >
-      <div className="relative h-[calc(100vh-120px)] gradient-mask-b-80 2xl:h-[calc(87vh-150px)] 2xl:min-h-screen 2xl:w-[180vw] 2xl:max-w-[130rem] 2xl:gradient-mask-l-80">
+      <div className="relative h-[calc(100vh-120px)] gradient-mask-b-80 2xl:h-[calc(87vh-150px)] 2xl:min-h-screen 2xl:w-[180vw] 2xl:max-w-[130rem] 2xl:gradient-mask-r-80">
         {children}
       </div>
       <ObjectInfo grow>
@@ -30,22 +30,18 @@ const Lagoon = ({ children }: { children: React.ReactNode }) => (
         <ObjectInfo.Description>
           <p>
             The Lagoon nebula is about 4,000 to 6,000 light-years from Earth and
-            spans roughly 110 light-years across. It is renowned for its bright,
-            intricate structure, featuring a central region of intense star
-            formation. The nebula is illuminated by young, massive stars that
-            energize the surrounding gas and dust, creating a striking mix of
-            glowing red regions and dark, opaque filaments. The Lagoon Nebula is
-            one of the largest and most active stellar nurseries visible from
-            Earth.
+            is renowned for its bright, intricate structure, featuring a central
+            region of intense star formation. The nebula is illuminated by
+            young, massive stars that energize the surrounding gas and dust,
+            creating a striking mix of glowing red regions and dark, opaque
+            filaments.
           </p>
           <p>
             Alongside it near the top of the image is the Trifid Nebula, a
             combination of an emission nebula, reflection nebula, and dark
             nebula, giving it a distinctive appearance. The nebula is known for
             its three-lobed shape, which is the result of dark dust lanes
-            obscuring parts of the glowing gas. The Trifid Nebula is also a site
-            of active star formation, with newly formed stars contributing to
-            the bright and colorful regions within the nebula.
+            obscuring parts of the glowing gas.
           </p>
         </ObjectInfo.Description>
         <Suspense>

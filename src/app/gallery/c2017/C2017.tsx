@@ -36,15 +36,12 @@ const C2017 = ({ children }: { children: React.ReactNode }) => (
             it close to the Sun and Earth at relatively rare intervals.
           </p>
           <p>
-            When it was first observed, C/2017 K2 was already near its
-            perihelion (closest approach to the Sun) and had a bright coma and
-            long tail, making it visible through telescopes. The comet made its
-            closest approach to the Sun on July 14, 2022. During this time, it
-            exhibited a prominent and active coma and a lengthy, well-defined
-            tail.
+            The comet made its closest approach to the Sun on July 14, 2022.
+            During this time, it exhibited a prominent and active coma and a
+            lengthy, well-defined tail.
           </p>
         </ObjectInfo.Description>
-        <h6 className="text-3xl">Thanks for visiting!</h6>
+        <h6 className="text-2xl">Thanks for visiting!</h6>
         <Suspense>
           <ContinueButton text="Continue to gallery" href="/gallery" />
         </Suspense>
