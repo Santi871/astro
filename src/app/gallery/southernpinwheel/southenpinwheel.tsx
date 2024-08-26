@@ -37,10 +37,6 @@ const SouthernPinwheel = ({ children }: { children: React.ReactNode }) => (
             formation, with clusters of young, hot stars and nebulae that emit a
             rich, colorful glow.
           </p>
-          <p>
-            M83 is distinguished by its prominent central bar, sweeping spiral
-            arms, and bright, star-filled core.
-          </p>
         </ObjectInfo.Description>
         <Suspense>
           <ContinueButton text="Continue (4/10)" href="/gallery/montesalpes" />

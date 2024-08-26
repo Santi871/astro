@@ -40,10 +40,6 @@ const Tarantula = ({ children }: { children: React.ReactNode }) => (
             gas and dust, creating a complex and colorful array of filaments and
             cavities.
           </p>
-          <p>
-            At its core lies the R136 star cluster, home to some of the most
-            massive and luminous stars ever discovered.
-          </p>
         </ObjectInfo.Description>
         <Suspense>
           <ContinueButton text="Continue (2/10)" href="/gallery/dragons" />

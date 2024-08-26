@@ -12,9 +12,9 @@ const Jupiter = ({ children }: { children: React.ReactNode }) => (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="items-center justify-between 2xl:flex"
+      className="items-center justify-between 2xl:flex 2xl:flex-row-reverse"
     >
-      <div className="relative h-[calc(100vh-120px)] gradient-mask-b-80 2xl:h-[calc(87vh-150px)] 2xl:min-h-screen 2xl:w-[180vw] 2xl:max-w-[130rem] 2xl:gradient-mask-r-80">
+      <div className="relative h-[calc(100vh-120px)] gradient-mask-b-80 2xl:h-[calc(87vh-150px)] 2xl:min-h-screen 2xl:w-[180vw] 2xl:max-w-[130rem] 2xl:gradient-mask-l-80">
         {children}
       </div>
       <ObjectInfo grow>

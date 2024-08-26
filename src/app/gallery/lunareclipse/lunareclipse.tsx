@@ -27,9 +27,8 @@ const LunarEclipse = ({ children }: { children: React.ReactNode }) => (
             the Sun and the Moon, causing the Earth's shadow to completely cover
             the Moon. During this event, the Moon moves into the umbra, the
             darkest part of the Earth's shadow. As a result, the Moon can take
-            on a striking reddish or coppery hue, often referred to as a "blood
-            moon," due to the scattering of sunlight through the Earth's
-            atmosphere, which filters and bends the light.
+            on a striking reddish hue, often referred to as a "blood moon," due
+            to the scattering of sunlight through the Earth's atmosphere.
           </p>
           <p>
             The totality phase of a total lunar eclipse lasts from a few minutes
