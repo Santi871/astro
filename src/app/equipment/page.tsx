@@ -8,7 +8,7 @@ import EquipmentSection from "@/components/EquipmentSection";
 
 const EquipmentPage = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start gap-8 bg-neutral-950 pb-4 pt-16 2xl:flex-row 2xl:items-start 2xl:justify-center 2xl:pt-36">
+    <main className="flex min-h-screen flex-col items-center justify-start gap-8 bg-neutral-950 pb-4 pt-20 2xl:flex-row 2xl:items-start 2xl:justify-center 2xl:pt-36">
       <Navbar page="/equipment" />
       <div className="flex flex-col items-center gap-6 2xl:absolute 2xl:right-12 2xl:flex-row 2xl:items-start 2xl:justify-center">
         <motion.div
@@ -31,7 +31,7 @@ const EquipmentPage = () => {
           <EquipmentSection>
             <EquipmentSection.Title>Imaging Cameras</EquipmentSection.Title>
             <EquipmentSection.Items>
-              ZWO ASI1600MM / ZWO ASI462MC / Fujifilm X-T30ii
+              ZWO ASI1600MM / ZWO ASI462MC / Fujifilm X-T30ii / Canon 6D
             </EquipmentSection.Items>
           </EquipmentSection>
           <EquipmentSection>
