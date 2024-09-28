@@ -22,13 +22,13 @@ const Carina = ({ children }: { children: React.ReactNode }) => (
         <ObjectInfo.Subtitle>
           Eta Carina Nebula, Running Chicken Nebula, Southern Pleiades cluster
         </ObjectInfo.Subtitle>
-        <ObjectInfo.Filters>
-          <h6>
-            <span className="text-red-500">R</span>,{" "}
-            <span className="text-green-500">G</span>,{" "}
-            <span className="text-blue-500">B</span>
-          </h6>
-        </ObjectInfo.Filters>
+        <ObjectInfo.Filters type="rgb" />
+        <ObjectInfo.Details>
+          <p>Object Type: Milky Way region w/ nebulae and clusters</p>
+          <p>Right Ascension: 10h 45m 4s</p>
+          <p>Declination: -59° 41′ 4″</p>
+          <p>Integration Time: 1 hour</p>
+        </ObjectInfo.Details>
         <ObjectInfo.Description>
           <p>
             One of the crown jewels of the southern sky, the Eta Carinae Nebula
@@ -37,13 +37,9 @@ const Carina = ({ children }: { children: React.ReactNode }) => (
             Milky Way galaxy. The nebula is approximately 8,500 light-years from
             Earth.
           </p>
-          <p>
-            The title star, η (eta) Carinae, is a supergiant of about 100 solar
-            masses that is ready to go supernova "any cosmic day now".
-          </p>
         </ObjectInfo.Description>
         <Suspense>
-          <ContinueButton text="Continue (1/9)" href="/gallery/tarantula" />
+          <ContinueButton text="Continue (1/10)" href="/gallery/tarantula" />
         </Suspense>
       </ObjectInfo>
     </motion.div>

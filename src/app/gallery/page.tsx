@@ -2,8 +2,8 @@
 import GalleryPreview from "@/components/GalleryPreview";
 import Navbar from "@/components/Navbar";
 
-const GalleryPage = () => (
-  <main className="flex min-h-screen flex-col items-center justify-start gap-8 bg-neutral-950 pb-8 pt-16 2xl:pt-36">
+const Gallery = () => (
+  <main className="flex min-h-screen flex-col items-center justify-start gap-8 bg-neutral-950 pb-8 pt-20 md:pt-24 2xl:pt-36">
     <Navbar page="/gallery" />
     <GalleryPreview
       title="Dragons of Ara"
@@ -59,6 +59,12 @@ const GalleryPage = () => (
       href="/gallery/jupiter?from=gallery"
       src="https://cdn.astrobin.com/thumbs/6oriK55tIl33_16536x0_ieTZ0INm.png"
       alt="jupiter"
+    />
+    <AstroImage
+      title="C/2017 K2"
+      href="/gallery/c2017?from=gallery"
+      src="https://zipline.santi871.com/u/7qZ9oH.png"
+      alt="c2017"
     />
   </main>
 );

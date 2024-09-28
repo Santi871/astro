@@ -26,13 +26,14 @@ const GalleryPreview = ({
       className="relative h-[36rem] w-5/6 cursor-pointer lg:max-w-screen-2xl"
     >
       <Link href={href}>
-        <motion.div className="relative z-50 m-4 max-w-48 rounded-xl bg-neutral-950/50 p-2 text-center font-mono text-neutral-300 backdrop-blur-sm 2xl:text-lg">
+        <motion.div className="relative z-40 m-4 max-w-44 rounded-xl bg-neutral-950/50 p-2 text-center font-mono text-neutral-300 backdrop-blur-sm 2xl:text-lg">
           {title}
         </motion.div>
         <FadeInImage
           src={src}
           alt={alt}
-          className={`rounded-xl object-cover shadow-xl shadow-black/80 ${fit}`}
+          className={`rounded-xl object-cover shadow-xl shadow-black/80 ${fit} z-0`}
+          unoptimized
           fill
         />
       </Link>

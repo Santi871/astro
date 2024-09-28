@@ -18,33 +18,17 @@ const LunarEclipse = ({ children }: { children: React.ReactNode }) => (
         {children}
       </div>
       <ObjectInfo grow>
-        <ObjectInfo.Title>Total Lunar Eclipse</ObjectInfo.Title>
-        <ObjectInfo.Subtitle>
-          15th of May 2022, Buenos Aires, Argentina
-        </ObjectInfo.Subtitle>
-        <ObjectInfo.Filters>
-          <h6>
-            <span className="text-red-500">R</span>,{" "}
-            <span className="text-green-500">G</span>,{" "}
-            <span className="text-blue-500">B</span>
-          </h6>
-        </ObjectInfo.Filters>
-        <ObjectInfo.Details>
-          <p>Object Type: Emission nebula</p>
-          <p>Declination: -24° 23′ 12″</p>
-          <p>Right Ascension: 18h 3m 37s</p>
-          <p>Imaging Type: Broadband</p>
-          <p>Integration Time: 9 hours per panel (2 panels)</p>
-        </ObjectInfo.Details>
+        <ObjectInfo.Title>15th May '22 Lunar Eclipse</ObjectInfo.Title>
+        <ObjectInfo.Subtitle>Buenos Aires, Argentina</ObjectInfo.Subtitle>
+        <ObjectInfo.Filters type="rgb" />
         <ObjectInfo.Description>
           <p>
             A total lunar eclipse occurs when the Earth passes directly between
             the Sun and the Moon, causing the Earth's shadow to completely cover
             the Moon. During this event, the Moon moves into the umbra, the
             darkest part of the Earth's shadow. As a result, the Moon can take
-            on a striking reddish or coppery hue, often referred to as a "blood
-            moon," due to the scattering of sunlight through the Earth's
-            atmosphere, which filters and bends the light.
+            on a striking reddish hue, often referred to as a "blood moon," due
+            to the scattering of sunlight through the Earth's atmosphere.
           </p>
           <p>
             The totality phase of a total lunar eclipse lasts from a few minutes
@@ -53,7 +37,7 @@ const LunarEclipse = ({ children }: { children: React.ReactNode }) => (
           </p>
         </ObjectInfo.Description>
         <Suspense>
-          <ContinueButton text="Continue (8/9)" href="/gallery/solareclipse" />
+          <ContinueButton text="Continue (8/10)" href="/gallery/solareclipse" />
         </Suspense>
       </ObjectInfo>
     </motion.div>

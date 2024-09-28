@@ -5,8 +5,8 @@ import "./globals.css";
 const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Astro",
-  description: "Gallery page",
+  title: "Santi871 Astro",
+  description: "Astrophotography by Santi871",
 };
 
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => (

@@ -22,12 +22,12 @@ const ContinueButton = ({ text, href, animate = false }: NextImageProps) => {
   return (
     <motion.div key="tour-button" className="z-0">
       <Link
-        className="relative flex flex-col items-center justify-center gap-5 2xl:text-2xl"
+        className="relative flex flex-col items-center justify-center gap-5 text-lg 2xl:text-2xl"
         href={fromGallery ? "/gallery" : href}
         prefetch
       >
         <motion.div
-          whileHover={{ scale: 1.15 }}
+          whileTap={{ scale: 0.85 }}
           className={`flex flex-col items-center ${animate ? "gap-3" : "gap-2 2xl:gap-3"}`}
         >
           <p>{fromGallery ? "Return" : text}</p>

@@ -19,14 +19,8 @@ const MontesAlpes = ({ children }: { children: React.ReactNode }) => (
       </div>
       <ObjectInfo grow>
         <ObjectInfo.Title>Montes Alpes</ObjectInfo.Title>
-        <ObjectInfo.Subtitle>Messier 83</ObjectInfo.Subtitle>
-        <ObjectInfo.Filters>
-          <h6>
-            <span className="text-red-500">R</span>,{" "}
-            <span className="text-green-500">G</span>,{" "}
-            <span className="text-blue-500">B</span>
-          </h6>
-        </ObjectInfo.Filters>
+        <ObjectInfo.Subtitle>Lunar Mountain Range</ObjectInfo.Subtitle>
+        <ObjectInfo.Filters type="rgb" />
         <ObjectInfo.Details>
           <p>Imaging Type: Lucky Imaging</p>
           <p>Focal Length: 1800mm</p>
@@ -46,12 +40,11 @@ const MontesAlpes = ({ children }: { children: React.ReactNode }) => (
             significant stop in the vicinity of the Montes Alpes. The Lunar
             Module, "Falcon," landed in the nearby Hadley-Apennine region,
             allowing astronauts David Scott and James Irwin to explore the area.
-            Their exploration included visits to the base of the Montes Alpes,
-            where they collected samples and conducted experiments.
+            Their exploration included visits to the base of the Montes Alpes.
           </p>
         </ObjectInfo.Description>
         <Suspense>
-          <ContinueButton text="Continue (5/9)" href="/gallery/lagoon" />
+          <ContinueButton text="Continue (5/10)" href="/gallery/lagoon" />
         </Suspense>
       </ObjectInfo>
     </motion.div>

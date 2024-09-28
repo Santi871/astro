@@ -12,27 +12,20 @@ const Jupiter = ({ children }: { children: React.ReactNode }) => (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="items-center justify-between 2xl:flex"
+      className="items-center justify-between 2xl:flex 2xl:flex-row-reverse"
     >
-      <div className="relative h-[calc(100vh-120px)] gradient-mask-b-80 2xl:h-[calc(87vh-150px)] 2xl:min-h-screen 2xl:w-[180vw] 2xl:max-w-[130rem] 2xl:gradient-mask-r-80">
+      <div className="relative h-[calc(100vh-120px)] gradient-mask-b-80 2xl:h-[calc(87vh-150px)] 2xl:min-h-screen 2xl:w-[180vw] 2xl:max-w-[130rem] 2xl:gradient-mask-l-80">
         {children}
       </div>
       <ObjectInfo grow>
         <ObjectInfo.Title>Jupiter & Moons</ObjectInfo.Title>
         <ObjectInfo.Subtitle>Io, Ganymede, Europa</ObjectInfo.Subtitle>
-        <ObjectInfo.Filters>
-          <h6>
-            <span className="text-red-500">R</span>,{" "}
-            <span className="text-green-500">G</span>,{" "}
-            <span className="text-blue-500">B</span>
-          </h6>
-        </ObjectInfo.Filters>
+        <ObjectInfo.Filters type="rgb" />
         <ObjectInfo.Details>
-          <p>Object Type: Emission nebula</p>
-          <p>Declination: -24° 23′ 12″</p>
-          <p>Right Ascension: 18h 3m 37s</p>
-          <p>Imaging Type: Broadband</p>
-          <p>Integration Time: 9 hours per panel (2 panels)</p>
+          <p>Imaging Type: Lucky Imaging</p>
+          <p>Focal Length: 1800mm</p>
+          <p>Aperture: 130mm</p>
+          <p>Pixel size: 2.9μm</p>
         </ObjectInfo.Details>
         <ObjectInfo.Description>
           <p>
@@ -49,7 +42,7 @@ const Jupiter = ({ children }: { children: React.ReactNode }) => (
           </p>
         </ObjectInfo.Description>
         <Suspense>
-          <ContinueButton text="Continue (6/9)" href="/gallery/lunareclipse" />
+          <ContinueButton text="Continue (7/10)" href="/gallery/lunareclipse" />
         </Suspense>
       </ObjectInfo>
     </motion.div>

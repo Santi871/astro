@@ -21,6 +21,12 @@ const nextConfig = {
                 hostname: 'i.imgur.com',
                 port: '',
                 pathname: '/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'zipline.santi871.com',
+                port: '',
+                pathname: '/u/**',
             }
         ]
     }
