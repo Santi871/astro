@@ -48,7 +48,7 @@ const LivePage = () => {
 
   useEffect(() => {
     const connect = new HubConnectionBuilder()
-      .withUrl("http://localhost:5053/hub")
+      .withUrl("https://santivegega.com/hub")
       .withAutomaticReconnect([1, 10, 30])
       .configureLogging(LogLevel.Information)
       .build();
