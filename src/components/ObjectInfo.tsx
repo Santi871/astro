@@ -26,9 +26,17 @@ const Subtitle = ({ children }: { children: React.ReactNode }) => {
   return <div className="text-xl">{children}</div>;
 };
 
-const Filters = ({ type }: { type: "rgb" | "sho" | "mono" }) => {
+const Filters = ({ type }: { type: "hargb" | "rgb" | "sho" | "mono" }) => {
   const renderFilters = () => {
     switch (type) {
+      case "hargb":
+        return (
+          <h6>
+            <span className="text-red-500">Hα+R</span>,{" "}
+            <span className="text-green-500">G</span>,{" "}
+            <span className="text-blue-500">B</span>
+          </h6>
+        );
       case "rgb":
         return (
           <h6>

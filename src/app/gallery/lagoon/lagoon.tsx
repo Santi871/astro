@@ -20,7 +20,7 @@ const Lagoon = ({ children }: { children: React.ReactNode }) => (
       <ObjectInfo grow>
         <ObjectInfo.Title>Lagoon & Trifid</ObjectInfo.Title>
         <ObjectInfo.Subtitle>Messier 8, Messier 20</ObjectInfo.Subtitle>
-        <ObjectInfo.Filters type="rgb" />
+        <ObjectInfo.Filters type="hargb" />
         <ObjectInfo.Details>
           <p>Object Type: Emission/reflection/dark nebula</p>
           <p>Right Ascension: 18h 3m 37s</p>
