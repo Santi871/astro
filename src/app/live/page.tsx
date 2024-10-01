@@ -15,6 +15,7 @@ import ReactTimeAgo from "react-time-ago";
 import ScopeDataWindow from "@/components/ScopeDataWindow";
 import ScopeDataSection from "@/components/ScopeDataSection";
 import FadeInImage from "@/components/FadeInImage";
+import VideoFeed from "@/components/VideoFeed";
 TimeAgo.addDefaultLocale(en);
 
 interface PromQlQuery {
@@ -118,8 +119,11 @@ const LivePage = () => {
             value={mountAlt}
             connected={connected}
           />
-          <div className="col-start-3 col-end-5 row-start-3 row-end-8 my-2 hidden items-center justify-center rounded-xl bg-neutral-950 text-center shadow-md lg:flex">
-            <p className="text-neutral-600">Image unavailable</p>
+          <div className="relative left-4 col-start-1 col-end-3 row-start-11 row-end-13 my-2 flex h-52 w-96 items-center justify-center overflow-hidden rounded-xl bg-neutral-950 text-center shadow-md lg:top-4 lg:col-start-3 lg:col-end-5 lg:row-start-3 lg:row-end-8 lg:flex">
+            <p className="absolute z-0 text-neutral-500">
+              Video feed unavailable
+            </p>
+            <VideoFeed src="https://scopefeed.santivegega.com/stream/27aec28e-6181-4753-9acd-0456a75f0289/channel/0/hls/live/index.m3u8" />
           </div>
           <h6 className="col-span-2 text-xl text-white underline">Camera</h6>
           <ScopeDataWindow

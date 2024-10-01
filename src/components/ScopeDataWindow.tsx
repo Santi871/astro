@@ -15,7 +15,7 @@ const ScopeDataWindow = ({
   value,
 }: ScopeDataWindowProps) => {
   return (
-    <div className="flex flex-col items-center gap-2">
+    <div className="flex flex-col items-center">
       <p className="text-white">
         {name} <span className="text-neutral-500">[{unit}]</span>
       </p>{" "}
