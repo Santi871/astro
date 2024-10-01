@@ -65,7 +65,7 @@ const LivePage = () => {
           setLastRefresh(result.data.result[0].value[0]);
           setMountAlt(Number(result.data.result[0].value[1]));
         });
-        // connect?.invoke("FetchStatus");
+        connect?.invoke("FetchStatus");
         setInterval(() => {
           console.log("invoke");
           connect?.invoke("FetchStatus").catch(() => setConnectError(true));
