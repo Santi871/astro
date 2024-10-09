@@ -7,16 +7,21 @@ import {
   LogLevel,
 } from "@microsoft/signalr";
 import React, { useEffect, useState } from "react";
-import Counter from "@/components/Counter";
 import TimeAgo from "javascript-time-ago";
 
 import en from "javascript-time-ago/locale/en";
 import ReactTimeAgo from "react-time-ago";
 import ScopeDataWindow from "@/components/ScopeDataWindow";
 import ScopeDataSection from "@/components/ScopeDataSection";
-import FadeInImage from "@/components/FadeInImage";
 import VideoFeed from "@/components/VideoFeed";
 TimeAgo.addDefaultLocale(en);
+
+interface ScopeStatus {
+  RightAscension: number;
+  Declination: number;
+  Altitude: number;
+  Azimuth: number;
+}
 
 interface PromQlQuery {
   status: string;
@@ -45,6 +50,7 @@ const LivePage = () => {
   const [connected, setConnected] = useState<boolean>(false);
   const [connectError, setConnectError] = useState<boolean>(false);
   const [mountAlt, setMountAlt] = useState<number | null>();
+  const [mountStatus, setMountStatus] = useState<ScopeStatus | null>();
   const [lastRefresh, setLastRefresh] = useState<number | null>();
 
   useEffect(() => {
@@ -60,15 +66,14 @@ const LivePage = () => {
         setConnected(true);
         setConnectError(false);
         connect.onclose(() => setConnected(false));
-        connect.on("SendStatus", (data: string) => {
-          const result: PromQlQuery = JSON.parse(data);
-          setLastRefresh(result.data.result[0].value[0]);
-          setMountAlt(Number(result.data.result[0].value[1]));
+        connect.on("SendStatusV2", (data: string) => {
+          const result: ScopeStatus = JSON.parse(data);
+          setLastRefresh(Date.now());
+          setMountStatus(result);
         });
-        connect?.invoke("FetchStatus");
+        connect?.invoke("FetchStatusV2");
         setInterval(() => {
-          console.log("invoke");
-          connect?.invoke("FetchStatus").catch(() => setConnectError(true));
+          connect?.invoke("FetchStatusV2").catch(() => setConnectError(true));
         }, 5000);
       })
 
@@ -87,9 +92,7 @@ const LivePage = () => {
   }, []);
 
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-start gap-8 bg-neutral-950 pb-12 pt-32 ${connected && lastRefresh ? "text-white" : "text-neutral-600"} transition-all`}
-    >
+    <main className="flex min-h-screen flex-col items-center justify-start gap-8 bg-neutral-950 pb-12 pt-32 transition-all">
       <Navbar page="/live" />
       <div className="flex flex-col items-center justify-start gap-3 rounded-xl bg-neutral-900 p-5 underline-offset-4 shadow-xl">
         <h2 className="text-3xl text-white">Live Telescope Telemetry</h2>
@@ -98,25 +101,25 @@ const LivePage = () => {
           <ScopeDataWindow
             name="Altitude"
             unit="deg"
-            value={mountAlt}
+            value={mountStatus?.Altitude ?? 0}
             connected={connected}
           />
           <ScopeDataWindow
             name="Azimuth"
             unit="deg"
-            value={mountAlt}
+            value={mountStatus?.Azimuth ?? 0}
             connected={connected}
           />
           <ScopeDataWindow
             name="Right Ascension"
             unit="deg"
-            value={mountAlt}
+            value={mountStatus?.RightAscension ?? 0}
             connected={connected}
           />
           <ScopeDataWindow
             name="Declination"
             unit="deg"
-            value={mountAlt}
+            value={mountStatus?.Declination ?? 0}
             connected={connected}
           />
           <div className="relative left-4 col-start-1 col-end-3 row-start-11 row-end-13 my-2 flex h-52 w-96 items-center justify-center overflow-hidden rounded-xl bg-neutral-950 text-center shadow-md lg:top-4 lg:col-start-3 lg:col-end-5 lg:row-start-3 lg:row-end-8 lg:flex">

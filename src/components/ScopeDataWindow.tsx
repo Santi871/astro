@@ -15,7 +15,9 @@ const ScopeDataWindow = ({
   value,
 }: ScopeDataWindowProps) => {
   return (
-    <div className="flex flex-col items-center">
+    <div
+      className={`flex flex-col items-center ${connected && value ? "text-white" : "text-neutral-600"}`}
+    >
       <p className="text-white">
         {name} <span className="text-neutral-500">[{unit}]</span>
       </p>{" "}
