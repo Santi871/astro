@@ -7,42 +7,19 @@ import {
   LogLevel,
 } from "@microsoft/signalr";
 import React, { useEffect, useState } from "react";
-import TimeAgo from "javascript-time-ago";
-
-import en from "javascript-time-ago/locale/en";
-import ReactTimeAgo from "react-time-ago";
 import ScopeDataWindow from "@/components/ScopeDataWindow";
 import ScopeDataSection from "@/components/ScopeDataSection";
 import VideoFeed from "@/components/VideoFeed";
-TimeAgo.addDefaultLocale(en);
 
-interface ScopeStatus {
+export interface ScopeStatus {
   RightAscension: number;
   Declination: number;
   Altitude: number;
   Azimuth: number;
 }
 
-interface PromQlQuery {
-  status: string;
-  data: PromQlQueryData;
-}
-
-interface PromQlQueryResult {
-  metric: {
-    hostname: string;
-    instance: string;
-    job: string;
-    mount_name: string;
-    profile: string;
-    __name__: string;
-  };
-  value: any[];
-}
-
-interface PromQlQueryData {
-  resultType: string;
-  result: PromQlQueryResult[];
+export interface MountStatus {
+  connected: boolean;
 }
 
 const LivePage = () => {
@@ -186,16 +163,7 @@ const LivePage = () => {
           <div
             className={`h-2 w-2 rounded-full ${connected ? "bg-green-500" : connectError ? "bg-red-500" : "bg-neutral-500"} transition-colors`}
           />
-          <div className="flex items-center justify-center gap-1">
-            Backend
-            {connected && lastRefresh && (
-              <ReactTimeAgo
-                date={new Date(lastRefresh * 1000)}
-                timeStyle="twitter"
-                locale="en-US"
-              />
-            )}
-          </div>
+          <div className="flex items-center justify-center gap-1">Backend</div>
         </div>
       </div>
     </main>
