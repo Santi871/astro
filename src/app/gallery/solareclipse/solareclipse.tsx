@@ -18,7 +18,7 @@ const SolarEclipse = ({ children }: { children: React.ReactNode }) => (
         {children}
       </div>
       <ObjectInfo grow>
-        <ObjectInfo.Title>8th April '24 Solar Eclipse</ObjectInfo.Title>
+        <ObjectInfo.Title>8th April &apos;24 Solar Eclipse</ObjectInfo.Title>
         <ObjectInfo.Subtitle>Indianapolis, IN</ObjectInfo.Subtitle>
         <ObjectInfo.Filters type="rgb" />
         <ObjectInfo.Description>

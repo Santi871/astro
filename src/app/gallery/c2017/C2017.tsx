@@ -32,8 +32,8 @@ const C2017 = ({ children }: { children: React.ReactNode }) => (
             Comet C/2017 K2 (PanSTARRS) is a long-period comet that was
             discovered by the Pan-STARRS survey on May 21, 2017. It originates
             from the distant Oort Cloud, a region of icy bodies far beyond the
-            orbit of Neptune. The comet's orbit is highly elliptical, bringing
-            it close to the Sun and Earth at relatively rare intervals.
+            orbit of Neptune. The comet&apos;s orbit is highly elliptical,
+            bringing it close to the Sun and Earth at relatively rare intervals.
           </p>
           <p>
             The comet made its closest approach to the Sun on July 14, 2022.

@@ -32,13 +32,14 @@ const Jupiter = ({ children }: { children: React.ReactNode }) => (
             Jupiter is the largest planet in our Solar System, known for its
             immense size and striking features. With a diameter of about 86,900
             miles (139,800 kilometers), it is a gas giant predominantly composed
-            of hydrogen and helium. Jupiter's atmosphere is renowned for its
-            dynamic and colorful cloud bands, driven by its rapid rotation,
+            of hydrogen and helium. Jupiter&apos;s atmosphere is renowned for
+            its dynamic and colorful cloud bands, driven by its rapid rotation,
             which creates a dramatic striped appearance.
           </p>
           <p>
-            Seen in the image are some of Jupiter's largest moons: Io, Ganymede,
-            Europa. Ganymede is casting a shadow on Jupiter's surface.
+            Seen in the image are some of Jupiter&apos;s largest moons: Io,
+            Ganymede, Europa. Ganymede is casting a shadow on Jupiter&apos;s
+            surface.
           </p>
         </ObjectInfo.Description>
         <Suspense>

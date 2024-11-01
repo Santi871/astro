@@ -39,8 +39,8 @@ const Dragons = ({ children }: { children: React.ReactNode }) => (
           </p>
           <p>
             The glowing bipolar planetary nebula, NGC 6164, is visible at the
-            bottom of the frame, which some liken to being like the "dragon's
-            egg".
+            bottom of the frame, which some liken to being like the
+            &quot;dragon&apos;s egg&quot;.
           </p>
         </ObjectInfo.Description>
         <Suspense>

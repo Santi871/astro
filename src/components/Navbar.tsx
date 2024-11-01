@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { ReactNode } from "react";
+import React from "react";
 import NavbarItem from "./NavbarItem";
 import { TbExternalLink } from "react-icons/tb";
 

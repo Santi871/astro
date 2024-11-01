@@ -19,7 +19,7 @@ const EquipmentPage = () => {
           <EquipmentSection>
             <EquipmentSection.Title>Telescopes</EquipmentSection.Title>
             <EquipmentSection.Items>
-              AT-60ED / 5" Newtonian
+              AT-60ED / 5&quot; Newtonian
             </EquipmentSection.Items>
           </EquipmentSection>
           <EquipmentSection>
@@ -37,7 +37,8 @@ const EquipmentPage = () => {
           <EquipmentSection>
             <EquipmentSection.Title>Filters</EquipmentSection.Title>
             <EquipmentSection.Items>
-              ZWO LRGB 1.25" / Antlia SHO 3nm 1.25" / ZWO UVIR Cut 1.25"
+              ZWO LRGB 1.25&quot; / Antlia SHO 3nm 1.25&quot; / ZWO UVIR Cut
+              1.25&quot;
             </EquipmentSection.Items>
           </EquipmentSection>
           <EquipmentSection>

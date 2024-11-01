@@ -1,7 +1,5 @@
 import React from "react";
 import C2017 from "./C2017";
-import FadeInImage from "@/components/FadeInImage";
-import Link from "next/link";
 
 const C2017Page = () => {
   return (

@@ -38,9 +38,10 @@ const MontesAlpes = ({ children }: { children: React.ReactNode }) => (
           <p>
             The Apollo 15 mission, which landed on the Moon in July 1971, made a
             significant stop in the vicinity of the Montes Alpes. The Lunar
-            Module, "Falcon," landed in the nearby Hadley-Apennine region,
-            allowing astronauts David Scott and James Irwin to explore the area.
-            Their exploration included visits to the base of the Montes Alpes.
+            Module, &quot;Falcon,&quot; landed in the nearby Hadley-Apennine
+            region, allowing astronauts David Scott and James Irwin to explore
+            the area. Their exploration included visits to the base of the
+            Montes Alpes.
           </p>
         </ObjectInfo.Description>
         <Suspense>

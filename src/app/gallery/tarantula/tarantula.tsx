@@ -35,10 +35,10 @@ const Tarantula = ({ children }: { children: React.ReactNode }) => (
             located in the Large Magellanic Cloud, about 160,000 light-years
             from Earth. It is the largest known nebula in our local universe and
             is renowned for its intense activity and striking beauty. The
-            nebula's dynamic landscape is shaped by powerful stellar winds and
-            radiation from massive young stars, which illuminate the surrounding
-            gas and dust, creating a complex and colorful array of filaments and
-            cavities.
+            nebula&apos;s dynamic landscape is shaped by powerful stellar winds
+            and radiation from massive young stars, which illuminate the
+            surrounding gas and dust, creating a complex and colorful array of
+            filaments and cavities.
           </p>
         </ObjectInfo.Description>
         <Suspense>

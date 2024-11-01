@@ -18,17 +18,18 @@ const LunarEclipse = ({ children }: { children: React.ReactNode }) => (
         {children}
       </div>
       <ObjectInfo grow>
-        <ObjectInfo.Title>15th May '22 Lunar Eclipse</ObjectInfo.Title>
+        <ObjectInfo.Title>15th May &apos;22 Lunar Eclipse</ObjectInfo.Title>
         <ObjectInfo.Subtitle>Buenos Aires, Argentina</ObjectInfo.Subtitle>
         <ObjectInfo.Filters type="rgb" />
         <ObjectInfo.Description>
           <p>
             A total lunar eclipse occurs when the Earth passes directly between
-            the Sun and the Moon, causing the Earth's shadow to completely cover
-            the Moon. During this event, the Moon moves into the umbra, the
-            darkest part of the Earth's shadow. As a result, the Moon can take
-            on a striking reddish hue, often referred to as a "blood moon," due
-            to the scattering of sunlight through the Earth's atmosphere.
+            the Sun and the Moon, causing the Earth&apos;s shadow to completely
+            cover the Moon. During this event, the Moon moves into the umbra,
+            the darkest part of the Earth&apos;s shadow. As a result, the Moon
+            can take on a striking reddish hue, often referred to as a
+            &quot;blood moon,&quot; due to the scattering of sunlight through
+            the Earth&apos;s atmosphere.
           </p>
           <p>
             The totality phase of a total lunar eclipse lasts from a few minutes
