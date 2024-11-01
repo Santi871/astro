@@ -1,15 +1,10 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import {
-  HubConnection,
-  HubConnectionBuilder,
-  LogLevel,
-} from "@microsoft/signalr";
-import React, { useEffect, useState } from "react";
 import ScopeDataWindow from "@/components/ScopeDataWindow";
 import ScopeDataSection from "@/components/ScopeDataSection";
 import VideoFeed from "@/components/VideoFeed";
+import useScopeHub from "@/hooks/useScopeHub";
 
 export interface ScopeStatus {
   RightAscension: number;
@@ -23,50 +18,9 @@ export interface MountStatus {
 }
 
 const LivePage = () => {
-  const [connection, setConnection] = useState<HubConnection | null>(null);
-  const [connected, setConnected] = useState<boolean>(false);
-  const [connectError, setConnectError] = useState<boolean>(false);
-  const [mountAlt, setMountAlt] = useState<number | null>();
-  const [mountStatus, setMountStatus] = useState<ScopeStatus | null>();
-  const [lastRefresh, setLastRefresh] = useState<number | null>();
-
-  useEffect(() => {
-    const connect = new HubConnectionBuilder()
-      .withUrl("https://scopehub.santivegega.com/hub")
-      .withAutomaticReconnect([1, 10, 30])
-      .configureLogging(LogLevel.Information)
-      .build();
-    setConnection(connect);
-    connect
-      .start()
-      .then(() => {
-        setConnected(true);
-        setConnectError(false);
-        connect.onclose(() => setConnected(false));
-        connect.on("SendStatusV2", (data: string) => {
-          const result: ScopeStatus = JSON.parse(data);
-          setLastRefresh(Date.now());
-          setMountStatus(result);
-        });
-        connect?.invoke("FetchStatusV2");
-        setInterval(() => {
-          connect?.invoke("FetchStatusV2").catch(() => setConnectError(true));
-        }, 5000);
-      })
-
-      .catch((err) => {
-        console.error("Error while connecting to SignalR Hub:", err);
-        setConnectError(true);
-        setConnected(false);
-      });
-
-    return () => {
-      if (connection) {
-        connection.off("ReceiveMessage");
-        connection.stop();
-      }
-    };
-  }, []);
+  const { connected, connectError, mountStatus } = useScopeHub(
+    "https://scopehub.santivegega.com/hub",
+  );
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-start gap-8 bg-neutral-950 pb-12 pt-32 transition-all">
@@ -109,26 +63,26 @@ const LivePage = () => {
           <ScopeDataWindow
             name="Sensor Temp"
             unit="°C"
-            value={mountAlt}
+            value={0}
             connected={connected}
           />
           <ScopeDataWindow
             name="Cooler Power"
             unit="%"
-            value={mountAlt}
+            value={0}
             connected={connected}
           />
           <h6 className="col-span-2 text-xl text-white underline">Guider</h6>
           <ScopeDataWindow
             name="RA Error"
             unit="arcsec"
-            value={mountAlt}
+            value={0}
             connected={connected}
           />
           <ScopeDataWindow
             name="Dec Error"
             unit="arcsec"
-            value={mountAlt}
+            value={0}
             connected={connected}
           />
           <h6 className="col-span-2 text-xl text-white underline">
@@ -137,25 +91,25 @@ const LivePage = () => {
           <ScopeDataWindow
             name="Stars"
             unit="count"
-            value={mountAlt}
+            value={0}
             connected={connected}
           />
           <ScopeDataWindow
             name="HFR"
             unit="px"
-            value={mountAlt}
+            value={0}
             connected={connected}
           />
           <ScopeDataWindow
             name="Scale"
             unit="arcsec/px"
-            value={mountAlt}
+            value={0}
             connected={connected}
           />
           <ScopeDataWindow
             name="Exposure Time"
             unit="sec"
-            value={mountAlt}
+            value={0}
             connected={connected}
           />
         </ScopeDataSection>

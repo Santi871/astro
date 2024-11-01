@@ -1,8 +1,8 @@
 import Link from "next/link";
-import React, { ReactNode, useEffect, useState } from "react";
+import React from "react";
 import NavbarItem from "./NavbarItem";
 import { TbExternalLink } from "react-icons/tb";
-import { MountStatus, ScopeStatus } from "@/app/live/page";
+import useScopeStatus from "@/hooks/useScopeStatus";
 
 interface NavbarProps {
   page: string;
@@ -10,17 +10,7 @@ interface NavbarProps {
 }
 
 const Navbar = ({ page, noGradient = false }: NavbarProps) => {
-  const [connected, setConnected] = useState<boolean>(false);
-
-  useEffect(() => {
-    fetch("https://scopehub.santivegega.com/ScopeStatus")
-      .then((res) => res.json())
-      .then((status: MountStatus) => {
-        if (status.connected) {
-          setConnected(true);
-        }
-      });
-  }, []);
+  const { connected } = useScopeStatus();
 
   return (
     <nav
