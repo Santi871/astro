@@ -40,6 +40,11 @@ const Navbar = ({ page, noGradient = false }: NavbarProps) => (
           <TbExternalLink />
         </NavbarItem>
       </a>
+      <a href="/live">
+        <NavbarItem highlight={page === "/live"}>
+          <p>Live</p>
+        </NavbarItem>
+      </a>
     </div>
   </nav>
 );
