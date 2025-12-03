@@ -11,6 +11,8 @@
   "dependencies": {
     "@microsoft/signalr": "^8.0.7",
     "@plaiceholder/next": "^3.0.0",
+    "d3": "^3.5.17",
+    "d3-celestial": "^0.7.35",
     "framer-motion": "^11.3.27",
     "next": "14.2.5",
     "plaiceholder": "^3.0.0",
