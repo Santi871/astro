@@ -34,11 +34,7 @@ const Navbar = ({ page, noGradient = false }: NavbarProps) => (
           <p>Equipment</p>
         </NavbarItem>
       </a>
-      <a href="/livemap">
-        <NavbarItem highlight={page === "/livemap"}>
-          <p>Livemap</p>
-        </NavbarItem>
-      </a>
+
       <a href="https://www.astrobin.com/users/Santi871/" target="_blank">
         <NavbarItem>
           <p>Astrobin</p>

@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { HubConnection, HubConnectionBuilder } from "@microsoft/signalr";
 import { ScopeData } from "../types";
+import SkyMap from "./SkyMap";
 
 const TelescopeData = () => {
     const [connection, setConnection] = useState<HubConnection | null>(null);
@@ -74,6 +75,16 @@ const TelescopeData = () => {
                     Waiting for data...
                 </div>
             )}
+
+            <div className="relative h-[50vh] w-full overflow-hidden rounded-xl border border-neutral-800 bg-black shadow-2xl shadow-black/80 2xl:h-[600px]">
+                {data ? (
+                    <SkyMap ra={data.mount.rightAscension} dec={data.mount.declination} />
+                ) : (
+                    <div className="flex h-full w-full items-center justify-center text-neutral-500">
+                        Loading telescope data...
+                    </div>
+                )}
+            </div>
         </div>
     );
 };

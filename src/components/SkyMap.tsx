@@ -11,7 +11,7 @@ declare global {
 
 interface SkyMapProps {
     ra: number; // Hours
-    dec: number; // Degrees
+    dec: number; // Hours
 }
 
 const SkyMap: React.FC<SkyMapProps> = ({ ra, dec }) => {
@@ -44,11 +44,21 @@ const SkyMap: React.FC<SkyMapProps> = ({ ra, dec }) => {
         if (loaded && window.Celestial) {
             const config = {
                 width: 0, // Responsive
-                projection: "airy",
+                projection: "equirectangular",
                 transform: "equatorial",
-                center: [ra * 15, dec, 0],
+                center: [ra, dec, 0], // RA in hours for initial config
                 background: { fill: "#000000" },
-                adaptable: true,
+                formFields: {
+                    "location": true,  // Set visiblity for each group of fields with the respective id
+                    "general": true,
+                    "stars": true,
+                    "dsos": true,
+                    "constellations": true,
+                    "lines": true,
+                    "other": true,
+                    "download": false
+                },
+                zoomlevel: 2,
                 interactive: true,
                 stars: {
                     show: true,
@@ -77,11 +87,6 @@ const SkyMap: React.FC<SkyMapProps> = ({ ra, dec }) => {
                 datapath: window.location.origin + "/data/",
             };
 
-            // Clear previous map if any
-            if (mapRef.current) {
-                mapRef.current.innerHTML = "";
-            }
-
             console.log("Initializing Celestial with config:", config);
             window.Celestial.display(config);
         }
@@ -89,21 +94,19 @@ const SkyMap: React.FC<SkyMapProps> = ({ ra, dec }) => {
 
     useEffect(() => {
         if (loaded && window.Celestial) {
-            // Convert RA from hours to degrees (1h = 15deg)
-            const center = [ra * 15, dec, 0];
+            // RA and Dec are already in degrees
+            // d3-celestial rotate expects [long, lat, orient] in degrees
+            // In D3 celestial maps, RA corresponds to -Longitude.
+            // To center on RA 58, we need Longitude -58.
+            const center = [ra, dec, 0];
+            console.log("Rotating Celestial map to:", center);
 
             if (window.Celestial.rotate) {
                 window.Celestial.rotate({ center });
             }
-
-            // The error "window.Celestial.config is not a function" suggests config() is not exposed.
-            // We can try to re-display or just rotate.
-            // If we need to apply changes, we might need to call display again or just rely on rotate.
-            // window.Celestial.apply(config) seems to be internal or requires a config object, not a function call.
-
-            // For now, just rotate should be enough if the map is already displayed.
         }
     }, [ra, dec, loaded]);
+
 
     return (
         <div className="relative h-full w-full overflow-hidden rounded-xl bg-black">
